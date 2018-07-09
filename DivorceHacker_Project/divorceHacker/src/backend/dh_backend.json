@@ -1,0 +1,1527 @@
+{
+  "Categories": {
+    "Financial": {
+      "month_1": {
+        "title": "month 1",
+        "total_subcats": 2,
+        "total_tasks": 19,
+        "subcat_1": {
+          "title": "Get Money Wise",
+          "total_tasks": 5,
+          "task_1": {
+            "title": "Open a bank account in your name.",
+            "description": null
+          },
+          "task_2": {
+            "title": "Set aside money for living expenses and to hire an attorney.",
+            "description": null
+          },
+          "task_3": {
+            "title": "Set aside money for living expenses and to hire an attorney.",
+            "description": null
+          },
+          "task_4": {
+            "title": "Check your credit score.",
+            "description": null
+          },
+          "task_5": {
+            "title": "Open two credit cards in your name.",
+            "description": null
+          }
+        },
+        "subcat_2": {
+          "title": "Copy Financial Documents",
+          "total_tasks": 14,
+          "task_1": {
+            "title": "Employment Information",
+            "description": "Paycheck stubs for you and your spouse for the last 12 months (or at least the last three months to the current date)."
+          },
+          "task_2": {
+            "title": "Tax Returns",
+            "description": "Last three years of state and federal income tax returns."
+          },
+          "task_3": {
+            "title": "Pension/Retirement Programs",
+            "description": "Copies of 401K, investment programs, stock, stock options, bonds provided through the employer for both you and/or your spouse."
+          },
+          "task_4": {
+            "title": "Insurance",
+            "description": "Documents regarding insurance provided through the employer for both you and/or your spouse."
+          },
+          "task_5": {
+            "title": "Real Property",
+            "description": "Deeds showing the legal description of any real property owned individually or jointly with your spouse, escrow papers from the time of purchase, information from lender showing current mortgage balances, monthly payments, loan numbers, current real property tax statements, homeowners or fire insurance policies on all real properties, tax assessors statements."
+          },
+          "task_6": {
+            "title": "Stock Portfolio",
+            "description": "List of corporate stocks and/or stock certificates owned by you and your spouse, individually or jointly, the name and address of stock broker(s)."
+          },
+          "task_7": {
+            "title": "Cars, boats, trailers",
+            "description": "Copies of pink and registration slips, encumbrance (what’s owed), monthly payment."
+          },
+          "task_8": {
+            "title": "Life Insurance",
+            "description": "Current policies with statements of any loans against them."
+          },
+          "task_9": {
+            "title": "Promissory Notes and/or Deeds of Trust",
+            "description": "Copies of such records that name you and your spouse as beneficiaries."
+          },
+          "task_10": {
+            "title": "Credit Cards, Loans",
+            "description": "Credit cards, creditor’s statements showing names, address account numbers, and balances presently owed. Creditor’s statements showing balances owed at separation date.\nFinancial statements of net worth prepared by you or your spouse for the purpose of securing bank loans or for any other purpose. Any other information that will help establish the net worth individually or jointly, for you and your spouse."
+          },
+          "task_11": {
+            "title": "Household Furniture/Furnishings",
+            "description": "Pictures and/or your opinion of the estimated value. You may be asked to list those items which you wish to keep and those which you wish to give to your spouse."
+          },
+          "task_12": {
+            "title": "Bank/Credit Union Accounts",
+            "description": "Most recent statements showing balances, particularly at date of separation, held in individual or joint names, savings passbooks, Certificates of Deposit."
+          },
+          "task_13": {
+            "title": "Wills or Trusts",
+            "description": null
+          },
+          "task_14": {
+            "title": "Written Agreements",
+            "description": "* Premarital, postmarital written agreements with spouse.\n* Corporate, partnership federal and state income tax returns for the last three years.\n* Copies of recent financial statements prepared to apply for credit or business loans of any kind."
+          }
+        }
+      },
+      "month_2": {
+        "title": "month 2",
+        "total_subcats": 2,
+        "total_val": 0,
+        "subcat_1": {
+          "title": "Find a Divorce Financial Planner",
+          "total_tasks": 1,
+          "task_1": {
+            "title": "Questions to Ask the  Divorce Financial Planner",
+            "description": "\n* When did you receive your certification as a CFP, CDFA or CPA?\n* Do you have a specific background in taxation or accounting?\n* How many divorce cases have you completed?\n* Do you have experience in complex property divisions, and if so, will you illustrate multiple scenarios?\n* Are you familiar with calculations regarding employee stock options, restricted stock and/or executive compensation?\n* Can I see a sample of the written divorce financial plan you provide to your clients?\n* When is the last time you testified in court?\n* Are your credentials or licensing subject to review by government or regulatory agencies?\n* Do you have any disciplinary events, suspensions, or violations on your record under this or any other name?\n* Are you currently licensed and in compliance with all appropriate governing regulatory agencies?\n* If you are not subject to the above criteria, what qualifies you as a divorce financial expert?"
+          }
+        },
+        "subcat_2": {
+          "title": "Build Your Credit",
+          "total_tasks": 5,
+          "task_1": {
+            "title": "Make 100% of your payments on time.",
+            "description": null
+          },
+          "task_2": {
+            "title": "Don’t let your debt balance exceed 30% of your credit limit.",
+            "description": null
+          },
+          "task_3": {
+            "title": "Avoid opening too many new accounts at once.",
+            "description": null
+          },
+          "task_4": {
+            "title": "Keep accounts open for as long as possible.",
+            "description": null
+          },
+          "task_5": {
+            "title": "Check each of your credit reports annually for errors and discrepancies.",
+            "description": null
+          }
+        },
+        "total_tasks": 6
+      },
+      "month_3": {
+        "title": "month 3",
+        "total_subcats": 1,
+        "total_val": 0,
+        "subcat_1": {
+          "title": "Items to Gather to Establish Marital Standard of Living",
+          "total_tasks": 23,
+          "task_1": {
+            "title": "Mortgage statement",
+            "description": null
+          },
+          "task_2": {
+            "title": "Property Tax statement",
+            "description": null
+          },
+          "task_3": {
+            "title": "Homeowner’s Insurance statement",
+            "description": null
+          },
+          "task_4": {
+            "title": "Homeowner’s Association Dues statement",
+            "description": null
+          },
+          "task_5": {
+            "title": "Home maintenance checks, credit card statements, and receipts",
+            "description": "Determine from total year prior to date of separation."
+          },
+          "task_6": {
+            "title": "Home Repairs checks and credit card statements and receipts (total year prior to date of separation)",
+            "description": null
+          },
+          "task_7": {
+            "title": "Utilities statements (total year prior to date of separation)",
+            "description": null
+          },
+          "task_8": {
+            "title": "Phone, Cable, Internet statements (total year prior to date of separation)",
+            "description": null
+          },
+          "task_9": {
+            "title": "Automobile Expenses (total car payment, gas, service records for year prior to date of separation)",
+            "description": null
+          },
+          "task_10": {
+            "title": "Health Insurance statement",
+            "description": null
+          },
+          "task_11": {
+            "title": "Unreimbursed Medical Expenses records total year prior to date of separation",
+            "description": "Determine from total year prior to date of separation"
+          },
+          "task_12": {
+            "title": "Food at Home expenses",
+            "description": "Determine from total year prior to date of separation."
+          },
+          "task_13": {
+            "title": "Food Eating Out expenses",
+            "description": "Determine from total year prior to date of separation."
+          },
+          "task_14": {
+            "title": "Dry cleaning receipts",
+            "description": "total year prior to date of separation"
+          },
+          "task_15": {
+            "title": "Clothing expenses",
+            "description": "Determine from total year prior to date of separation."
+          },
+          "task_16": {
+            "title": "Personal expenses",
+            "description": "Determine from total year prior to date of separation."
+          },
+          "task_17": {
+            "title": "Fitness expenses",
+            "description": "Determine from total account withdrawals for membership."
+          },
+          "task_18": {
+            "title": "Entertainment expenses",
+            "description": "Determine from total year prior to date of separation."
+          },
+          "task_19": {
+            "title": "Gifts",
+            "description": "Determine from total year prior to date of separation."
+          },
+          "task_20": {
+            "title": "Vacations",
+            "description": "Determine from total year prior to date of separation."
+          },
+          "task_21": {
+            "title": "Charitable Contributions",
+            "description": "Includes average from last 3 years’ income tax returns."
+          },
+          "task_22": {
+            "title": "Savings, Investment, Retirement",
+            "description": "Includes total contributions year prior to date of separation."
+          },
+          "task_23": {
+            "title": "Miscellaneous",
+            "description": "Includes any other expenses in support of your marital standard of living."
+          }
+        },
+        "total_tasks": 23
+      },
+      "month_4": {
+        "title": "month 4",
+        "total_subcats": 1,
+        "subcat_1": {
+          "total_tasks": 5,
+          "title": "How to Handle the Suddenly Income Deficient Spouse (SIDS)",
+          "task_1": {
+            "title": "Gather personal and business tax returns for the last three years and if possible, documentation of the business’s financials",
+            "description": null
+          },
+          "task_2": {
+            "title": "If you do not have access to this information, discuss with your attorney the need to take discovery to obtain it",
+            "description": null
+          },
+          "task_3": {
+            "title": "Ask your attorney whether it is advisable to retain a forensic accountant to assist with the preparation and review of information obtained through discovery",
+            "description": null
+          },
+          "task_4": {
+            "title": "Factor into your divorce budget the cost of discovery and bringing a forensic on the team",
+            "description": null
+          },
+          "task_5": {
+            "title": "If your husband is earning less than before or is suddenly unemployed, consider conducting a vocational evaluation",
+            "description": null
+          }
+        },
+        "total_tasks": 5
+      },
+      "month_5": {
+        "title": "month 5",
+        "total_subcats": 1,
+        "subcat_1": {
+          "title": "Attorney Fees—When and How to Obtain an Order That Your Husband Pay Your Attorney Fees",
+          "total_tasks": 2,
+          "task_1": {
+            "title": "If your spouse earns more than you do, ask your attorney whether you qualify for an attorney’s fee order under the laws of your state",
+            "description": null
+          },
+          "task_2": {
+            "title": "If there is misconduct in your case by the other side, ask your attorney whether you qualify for attorney’s fees as a sanction",
+            "description": null
+          }
+        },
+        "total_tasks": 2
+      },
+      "month_6": {
+        "title": "month 6",
+        "total_subcats": 1,
+        "total_tasks": 3,
+        "subcat_1": {
+          "title": "When to Hire a Forensic Accountant",
+          "total_tasks": 3,
+          "task_1": {
+            "title": "When one spouse is suspected of concealing income or assets",
+            "description": null
+          },
+          "task_2": {
+            "title": "When there is a closely held business or a highly-compensated spouse",
+            "description": null
+          },
+          "task_3": {
+            "title": "When assessing the tax ramification of a proposed settlement",
+            "description": null
+          }
+        }
+      },
+      "month_7": {
+        "title": "month 7",
+        "total_subcats": 1,
+        "total_tasks": 3,
+        "subcat_1": {
+          "title": "Take Control of Your Finances",
+          "total_tasks": 3,
+          "task_1": {
+            "title": "The 50/30/20 Plan",
+            "description": "1. Calculate Your After-Tax Income\n2. Limit Your Needs to 50 Percent\n3. Limit Your Wants to 30 Percent\n4. Spend at Least 20 Percent on Savings and Debt Repayments "
+          },
+          "task_2": {
+            "title": "Use a Financial Advisor",
+            "description": "* Commission Based Financial Planners\n* Fee Based Financial Planners\n* Fee Only Financial Planners"
+          },
+          "task_3": {
+            "title": "Invest",
+            "description": "* Need the money in 1-2 years? Short-term investments are appropriate: money markets, CD’s, saving accounts\n* Need the money in 2-3 years? Lower risk investments, such as short-term bonds\n* Need the money in 4-5 years? You can add some risk investments into the portfolio (stocks)"
+          }
+        }
+      },
+      "month_8": {
+        "title": "month_8",
+        "total_subcats": 1,
+        "total_tasks": 9,
+        "subcat_1": {
+          "title": "Organize Your Financial Affairs",
+          "total_tasks": 9,
+          "task_1": {
+            "title": "Obtain a copy of your certified divorce decree",
+            "description": null
+          },
+          "task_2": {
+            "title": "Research your health insurance options",
+            "description": "* Keep your ex-spouse’s coverage for a limited time (up to 36 months) through COBRA.\n* Find your own insurance policy. Open enrollment for health insurance doesn’t begin again until the end of the year, but you’re likely eligible for a plan under a Special Enrollment Period, since a change in health coverage stemming from a divorce is a qualifying event.\n* Start coverage with your employer. Like open enrollment, your divorce qualifies you to sign up for coverage even if it’s outside your workplace’s enrollment period."
+          },
+          "task_3": {
+            "title": "Execute documents to transfer the title to property. (real estate, automobiles, boats, etc.)",
+            "description": null
+          },
+          "task_4": {
+            "title": "Establish a system to keep track of all child support made/received, alimony payments made/received, and medical expenses",
+            "description": null
+          },
+          "task_5": {
+            "title": "Consider establishing direct deposit or income withholding. (child support, spousal support and/or alimony payments)",
+            "description": null
+          },
+          "task_6": {
+            "title": "Close any joint credit accounts",
+            "description": null
+          },
+          "task_7": {
+            "title": "Update accounts",
+            "description": "* Social Security Card\n* Driver’s license\n* Passport\n* Credit cards"
+          },
+          "task_8": {
+            "title": "Remove your husband’s name and/or change your name/address on all remaining accounts, including:",
+            "description": "* Bank, brokerage and investment accounts\n* Employer’s records\n* IRS records\n* Life, health, homeowner’s and disability insurance policies\n* Post office (Remember to have your mail forwarded if you are moving.)\n* Professional licenses\n* Utility bills\n* Children’s school(s)"
+          },
+          "task_9": {
+            "title": "Update beneficiaries on the following plans:",
+            "description": "* Life insurance\n* 401Ks\n* Pensions\n* IRA accounts"
+          }
+        }
+      }
+    },
+    "Legal": {
+      "month_1": {
+        "title": "month 1",
+        "total_subcats": 2,
+        "subcat_1": {
+          "total_tasks": 3,
+          "title": "Know the Three Ways to Get Divorced",
+          "task_1": {
+            "title": "Mediation",
+            "description": null
+          },
+          "task_2": {
+            "title": "Collaborative Approach",
+            "description": null
+          },
+          "task_3": {
+            "title": "Traditional Litigation",
+            "description": null
+          }
+        },
+        "subcat_2": {
+          "title": "Find a Good Lawyer",
+          "total_tasks": 3,
+          "task_1": {
+            "title": "Ask your divorced friends for referrals",
+            "description": "Ask the following questions:\n* How much did the attorney charge for a retainer(the amount to start the case) and how much did they charge per hour?\n* Did the lawyer return their calls and emails within 24 hours?\n* How happy was your friend with the amount of support ordered and the division of assets?\n* How did the lawyer handle issues concerning children?\n* How often did the lawyer go to court and were they effective in obtaining the relief sought?\n* Did the lawyer do a good job preparing your friend for court appearances?\n* Will the lawyer allow you to negotiate directly with your husband Did the lawyer send a monthly bill that was easy to understand and in the range anticipated?\n* If not, how did the lawyer handle questions about the bill?\n* Does the lawyer have a paralegal or assistant who will handle the clerical tasks at a lower rate than the attorney?\n* How long did the divorce take?"
+          },
+          "task_2": {
+            "title": "Ask your therapist for referrals",
+            "description": null
+          },
+          "task_3": {
+            "title": "Make appointments to interview three divorce lawyers",
+            "description": null
+          }
+        },
+        "total_tasks": 6
+      },
+      "month_2": {
+        "title": "month 2",
+        "total_subcats": 1,
+        "subcat_1": {
+          "title": "Retain Counsel",
+          "total_tasks": 1,
+          "task_1": {
+            "title": "Questions to Ask the Lawyer",
+            "description": "* How many years have you practiced family law?;How many divorces have you handled?\n* What is the average length of time between filing for divorce and resolution? How long does your average case take?\n* What percentage of your cases go to trial?\n* How many cases have you tried?\n* How much do you charge per hour?\n* What is your retainer?\n* How do you bill?\n* Can I pay by credit card?\n* When do you recommend using formal discovery?\n* Will I need a forensic accountant and if so, who do you recommend?"
+          }
+        },
+        "total_tasks": 1
+      },
+      "month_3": {
+        "title": "month 3",
+        "total_subcats": 1,
+        "subcat_1": {
+          "title": "Consider How to Serve the Divorce Papers",
+          "total_tasks": 3,
+          "task_1": {
+            "title": "Notice of Acknowledgment and Receipt",
+            "description": "The least aggravating way to serve divorce papers is by Notice of Acknowledgement and Receipt. A form is sent by mail with the Summons and Petition and your spouse signs and returns it. But this only works if he is willing to cooperate."
+          },
+          "task_2": {
+            "title": "Process Server",
+            "description": "If you are concerned that your husband may drain the bank accounts or dissipate marital assets, you need to have him served immediately by a process server."
+          },
+          "task_3": {
+            "title": "Pick up",
+            "description": "If you are mediating your divorce, then typically the mediator will prepare the petition and summons, have you come in to sign the papers and then have your husband come in to pick them up, thus effectuating service."
+          }
+        },
+        "total_tasks": 3
+      },
+      "month_4": {
+        "title": "month 4",
+        "total_subcats": 1,
+        "subcat_1": {
+          "title": "Prepare Your Financial Disclosures",
+          "total_tasks": 4,
+          "task_1": {
+            "title": "Calendar a deadline in four weeks to have a draft prepared to submit to your attorney for review",
+            "description": null
+          },
+          "task_2": {
+            "title": "For your income and expense declaration, use your current and anticipated monthly expenses for your household, which includes you and anyone who is living with you",
+            "description": null
+          },
+          "task_3": {
+            "title": "Review utility payments and other fluctuating payments over the last twelve months and come up with a monthly average for your expense statement",
+            "description": null
+          },
+          "task_4": {
+            "title": "List all assets regardless of the characterization. Even if you think that something may be separate property, list everything and review with your attorney",
+            "description": null
+          }
+        },
+        "total_tasks": 4
+      },
+      "month_5": {
+        "title": "month 5",
+        "total_subcats": 1,
+        "subcat_1": {
+          "title": "Temporary Support—How to Get What You Need",
+          "total_tasks": 2,
+          "task_1": {
+            "title": "Prepare a document containing the facts about your financial need",
+            "description": "* Include your education, work history and earnings. If you have experienced any illnesses or handicaps that have precluded you from working, include the facts about it.\n* Include the facts about any time you have taken off work to raise children or to support your husband.\n* Use your income and expense declaration to show what you need to support your household."
+          },
+          "task_2": {
+            "title": "Include facts about your husband’s ability to pay",
+            "description": "* Include your husband’s education, his work history and his earnings.\n* Use tax returns to show what he has traditionally earned."
+          }
+        },
+        "total_tasks": 2
+      },
+      "month_6": {
+        "title": "month 6",
+        "total_subcats": 1,
+        "total_tasks": 3,
+        "subcat_1": {
+          "title": "Negotiate from a Position of Strength",
+          "total_tasks": 3,
+          "task_1": {
+            "title": "Conduct discovery",
+            "description": "\n* Requests for Production\n* Interrogatories\n* Depositions\n* Subpoenas of business records"
+          },
+          "task_2": {
+            "title": "Evaluate different settlement scenarios",
+            "description": null
+          },
+          "task_3": {
+            "title": "Mediation—How to Get What You Want",
+            "description": "* Be Prepared\n* Get Control of Your Emotions\n* Choose a Good Mediator\n* Educate Yourself About the Process\n* Consider What Your Spouse Wants\n* State Your Goals, But Name Your Bargaining Chips\n* Be Patient\n* Be Prepared to Leave with a Draft Settlement Agreement"
+          }
+        }
+      },
+      "month_7": {
+        "title": "month 7",
+        "total_subcats": 1,
+        "total_tasks": 3,
+        "subcat_1": {
+          "title": "Preparation of the Final Divorce Decree",
+          "total_tasks": 3,
+          "task_1": {
+            "title": "Have your attorney prepare the divorce decree",
+            "description": null
+          },
+          "task_2": {
+            "title": "Review it carefully and ask your attorney about any questions you may have",
+            "description": null
+          },
+          "task_3": {
+            "title": "Make certain everything you want covered is contained within the divorce decree",
+            "description": null
+          }
+        }
+      },
+      "month_8": {
+        "title": "month 8",
+        "total_subcats": 1,
+        "total_tasks": 2,
+        "subcat_1": {
+          "title": "Enforcement of original decree",
+          "total_tasks": 2,
+          "task_1": {
+            "title": "Failure to pay child support",
+            "description": "Contact LCSA in your county to collect payments."
+          },
+          "task_2": {
+            "title": "Failure to adhere to custody plan",
+            "description": "Contact your attorney."
+          }
+        }
+      }
+    },
+    "Work": {
+      "month_1": {
+        "title": "month 1",
+        "total_subcats": 1,
+        "total_tasks": 4,
+        "subcat_1": {
+          "title": "Consider Your Work Life",
+          "total_tasks": 4,
+          "task_1": {
+            "title": "Review Your Education and Work History",
+            "description": null
+          },
+          "task_2": {
+            "title": "Match Your Skills to the Current Labor Market",
+            "description": null
+          },
+          "task_3": {
+            "title": "Consider Additional Education/Training",
+            "description": null
+          },
+          "task_4": {
+            "title": "Network",
+            "description": "* Set up coffee or lunch with three friends to brainstorm about your skillset and with the intention of exploring what opportunities are available.\n* End each meeting by asking each friend to recommend one other person you might speak with.\n* Create a document or flowchart on your computer or use a notebook to keep track of who you have met with and the outcome of that discussion."
+          }
+        }
+      },
+      "month_2": {
+        "title": "month 2",
+        "total_subcats": 1,
+        "total_tasks": 6,
+        "subcat_1": {
+          "title": "Be Your Own Boss",
+          "total_tasks": 6,
+          "task_1": {
+            "title": "Identify the Right Business for You.",
+            "description": "* Do What You Know\n* Solve a Common Problem\n* Create Value"
+          },
+          "task_2": {
+            "title": "Know Your Target Audience",
+            "description": "* What is the size of your target audience?\n* Who are your customers?\n* Is your product or service relevant to their everyday life?\n* Why do they need it?"
+          },
+          "task_3": {
+            "title": "Understand the Money You Need for Your Business",
+            "description": "* Can you get enough from your divorce settlement?\n* Can you borrow what you need?\n    * Bank loan\n    * Business line of credit\n    * Family"
+          },
+          "task_4": {
+            "title": "Build a support network",
+            "description": "Find ways to give to those who can help you and they will return the favor."
+          },
+          "task_5": {
+            "title": "Get the word out",
+            "description": "Formats to use:\n* website\n* blog posts\n* workshops\n* public relations\n* columns and articles\n* speeches\n* email\n* newsletters"
+          },
+          "task_6": {
+            "title": "Get on Social Media.",
+            "description": "Platforms to use:\n* Twitter\n* Facebook\n* YouTube\n* LinkedIn"
+          }
+        }
+      },
+      "month_3": {
+        "title": "month 3",
+        "total_subcats": 1,
+        "total_tasks": 5,
+        "subcat_1": {
+          "title": "Consider Working Remotely",
+          "total_tasks": 5,
+          "task_1": {
+            "title": "Use a remote job board to find employers who are already remote",
+            "description": "E.g. WeWorkRemotely.com and Angel.com."
+          },
+          "task_2": {
+            "title": "Tout your ability to get things done and to be a self-starter",
+            "description": null
+          },
+          "task_3": {
+            "title": "Familiarize yourself with virtual meeting options",
+            "description": "E.g. Join.me, Skype, Uberconference, Slack, Asana, Basecamp."
+          },
+          "task_4": {
+            "title": "Go paperless",
+            "description": "E.g. Google Docs and Dropbox."
+          },
+          "task_5": {
+            "title": "Look for companies that sell digital goods and services",
+            "description": null
+          }
+        }
+      },
+      "month_4": {
+        "title": "month 4",
+        "total_subcats": 1,
+        "total_tasks": 2,
+        "subcat_1": {
+          "title": "Vocational Examination",
+          "total_tasks": 2,
+          "task_1": {
+            "title": "If your husband’s income drops significantly after the divorce is filed or if he is unemployed, discuss with your attorney whether to request a vocational evaluation of him",
+            "description": null
+          },
+          "task_2": {
+            "title": "If you are unemployed, ask your attorney if it would be beneficial for you to sit for a vocational evaluation to gather information and to be used as a defensive tactic",
+            "description": null
+          }
+        }
+      },
+      "month_5": {
+        "title": "month 5",
+        "total_subcats": 1,
+        "total_tasks": 9,
+        "subcat_1": {
+          "title": "Prepare to Launch Your Own Business - Create a Business Plan",
+          "total_tasks": 9,
+          "task_1": {
+            "title": "Executive Summary",
+            "description": null
+          },
+          "task_2": {
+            "title": "Company Description",
+            "description": null
+          },
+          "task_3": {
+            "title": "Market Analysis",
+            "description": null
+          },
+          "task_4": {
+            "title": "Organization and Management",
+            "description": null
+          },
+          "task_5": {
+            "title": "Service or Product Line",
+            "description": null
+          },
+          "task_6": {
+            "title": "Marketing and Sales",
+            "description": null
+          },
+          "task_7": {
+            "title": "Funding Request",
+            "description": null
+          },
+          "task_8": {
+            "title": "Financial Projections",
+            "description": null
+          },
+          "task_9": {
+            "title": "Appendix",
+            "description": null
+          }
+        }
+      },
+      "month_6": {
+        "title": "month 6",
+        "total_subcats": 1,
+        "total_val": 0,
+        "total_tasks": 7,
+        "subcat_1": {
+          "title": "Reduce your exposure to spousal support if you are the breadwinner",
+          "total_tasks": 7,
+          "task_1": {
+            "title": "Reduce the current household expenses",
+            "description": "The monthly household expenses are used to determine “need,” which in turn is used to determine support.  Reducing the household expenses reduces the benchmark “need” utilized in the support calculation."
+          },
+          "task_2": {
+            "title": "Establish a precedent of the husband supporting his own needs with little or no financial support from you",
+            "description": "If he can meet his own needs, then he doesn’t have an argument that he needs support from you."
+          },
+          "task_3": {
+            "title": "Help get the husband a job or more education",
+            "description": "Whatever you can do to help him become self-sufficient will strengthen your argument that he does not need support from you."
+          },
+          "task_4": {
+            "title": "Maximize time with the children",
+            "description": "The more time they spend with you, the less you will owe in child support."
+          },
+          "task_5": {
+            "title": "Allow a temporary disability to improve",
+            "description": "If you suffer from a disability, it will minimize your support obligation."
+          },
+          "task_6": {
+            "title": "Reduce income available for support",
+            "description": "If income is trending down, it would make sense in holding off the divorce to use a lower income in calculating maintenance."
+          },
+          "task_7": {
+            "title": "Request the husband undergo a vocational evaluation",
+            "description": "if he is shirking his obligation to work or under earning, request he agree to submit to a vocational evaluation for purposes of imputing income in the support determination."
+          }
+        }
+      },
+      "month_7": {
+        "title": "month 7",
+        "total_subcats": 1,
+        "total_tasks": 2,
+        "subcat_1": {
+          "title": "Crank Up the Income—Know What You’re Worth and Insist on It",
+          "total_tasks": 2,
+          "task_1": {
+            "title": "How to get a raise if you work for a company",
+            "description": "* Find Out What the Competition is Being Paid\n* Don’t Personalize It\n* Consider Your Timing\n* It’s Not About You, It’s About Them\n* Prove Your Worth\n* Know What You Want\n* It’s Not Just About Pay"
+          },
+          "task_2": {
+            "title": "How to increase your income if you work for yourself",
+            "description": "* Don’t Undersell Yourself\n* Increase Your Rate with Your Next Potential Prospect\n* Raise Your Value"
+          }
+        }
+      },
+      "month_8": {
+        "title": "month 8",
+        "total_subcats": 1,
+        "total_tasks": 5,
+        "subcat_1": {
+          "title": "How to Use Social Media to Increase Business",
+          "total_tasks": 5,
+          "task_1": {
+            "title": "Determine the best way to connect with prospects",
+            "description": "* Facebook for business-to-consumer sales\n* Instagram and Pinterest increase visibility\n* LinkedIn to connect with people at corporations that might be interested in your product or service\n* Twitter can be used for all kinds of sales\n* Blogs, live chats and comment sections on websites to generate leads"
+          },
+          "task_2": {
+            "title": "Join a community and create a persona",
+            "description": "* Build up a personal account\n* Have conversations\n* Become acquainted with the norms and expectations of the community"
+          },
+          "task_3": {
+            "title": "Connect",
+            "description": "* Friend, follow or connect with individuals with profiles that match your clients’.\n* Conduct a search on each social networking website or use a resource like socialmention.com to find people who are talking about your industry or using related keywords.\n* Comment on their posts, retweet them, answer a question, or share something they say."
+          },
+          "task_4": {
+            "title": "Build relationships",
+            "description": "Develop relationships, which will turn into leads."
+          },
+          "task_5": {
+            "title": "Engage in a conversation",
+            "description": "\n* Create a Facebook group related to your product or service and invite prospects to join. Then, send targeted messages to members who are active within the group.\n* Join the groups that your clients are members of on LinkedIn. Engage in conversation there by answering questions that are asked and showcasing your expertise at problem solving in a specific area.\n* Listen to your prospects’ tweets and use them as trigger points to start a conversation on a business development call."
+          }
+        }
+      }
+    },
+    "Children": {
+      "month_1": {
+        "title": "month 1",
+        "total_subcats": 1,
+        "subcat_1": {
+          "title": "Handling Issues Concerning Your Children",
+          "total_tasks": 2,
+          "task_1": {
+            "title": "Document any instances of abuse",
+            "description": null
+          },
+          "task_2": {
+            "title": "Maximize Your Time With Your Children",
+            "description": null
+          }
+        },
+        "total_tasks": 2
+      },
+      "month_2": {
+        "title": "month 2",
+        "total_subcats": 2,
+        "subcat_1": {
+          "title": "How to Tell Your Children About the Divorce and Process it",
+          "total_tasks": 13,
+          "task_1": {
+            "title": "Tell children about the divorce together, if possible",
+            "description": null
+          },
+          "task_2": {
+            "title": "Answer children’s questions honestly, avoiding unnecessary details",
+            "description": null
+          },
+          "task_3": {
+            "title": "Reassure children they are not to blame for divorce",
+            "description": null
+          },
+          "task_4": {
+            "title": "Tell children they are loved and will be taken care of",
+            "description": null
+          },
+          "task_5": {
+            "title": "Include the other parent in school and other activities",
+            "description": null
+          },
+          "task_6": {
+            "title": "Be consistent and on time to pick up and return children",
+            "description": null
+          },
+          "task_7": {
+            "title": "Develop a workable parenting plan that gives children access to both parents",
+            "description": null
+          },
+          "task_8": {
+            "title": "Guard against canceling plans with children",
+            "description": null
+          },
+          "task_9": {
+            "title": "Give children permission to have a loving, satisfying relationship with the other parent",
+            "description": null
+          },
+          "task_10": {
+            "title": "Avoid putting children in the middle and in the position of having to take sides",
+            "description": null
+          },
+          "task_11": {
+            "title": "Avoid pumping children for information about the other parent",
+            "description": null
+          },
+          "task_12": {
+            "title": "Avoid arguing and discussing child support issues in front of children",
+            "description": null
+          },
+          "task_13": {
+            "title": "Avoid speaking negatively about the other parent or using the child as a pawn to hurt the other parent",
+            "description": null
+          }
+        },
+        "subcat_2": {
+          "title": "Know the Potential Signs of Stress in Your Children",
+          "total_tasks": 11,
+          "task_1": {
+            "title": "Acting younger than their chronological age",
+            "description": null
+          },
+          "task_2": {
+            "title": "Showing fear of being apart from parent(s)",
+            "description": null
+          },
+          "task_3": {
+            "title": "Experiencing moodiness",
+            "description": null
+          },
+          "task_4": {
+            "title": "Acting out",
+            "description": null
+          },
+          "task_5": {
+            "title": "Being manipulative",
+            "description": null
+          },
+          "task_6": {
+            "title": "Experiencing sadness and depression",
+            "description": null
+          },
+          "task_7": {
+            "title": "Struggling with guilt",
+            "description": null
+          },
+          "task_8": {
+            "title": "Having sleep or eating problems",
+            "description": null
+          },
+          "task_9": {
+            "title": "Undergoing change in personality",
+            "description": null
+          },
+          "task_10": {
+            "title": "Having academic and peer problems",
+            "description": null
+          },
+          "task_11": {
+            "title": "Displaying irrational fears and compulsive behavior",
+            "description": null
+          }
+        },
+        "total_tasks": 24
+      },
+      "month_3": {
+        "title": "month 3",
+        "total_subcats": 1,
+        "subcat_1": {
+          "title": "Be the Grown Up – Don’t Allow Children to Become Pawns in Divorce",
+          "total_tasks": 8,
+          "task_1": {
+            "title": "Do not blame the kids’ Dad by using the word “your” with disdain",
+            "description": null
+          },
+          "task_2": {
+            "title": "Do not trash-talk your ex in front of the kids",
+            "description": null
+          },
+          "task_3": {
+            "title": "Do not squash all attempts for your ex to spend time with the kids",
+            "description": null
+          },
+          "task_4": {
+            "title": "Don’t make excuses about visitation",
+            "description": null
+          },
+          "task_5": {
+            "title": "Do not use your children as messengers between you and your ex",
+            "description": null
+          },
+          "task_6": {
+            "title": "Do not sabotage your ex to make yourself look like the better parent",
+            "description": null
+          },
+          "task_7": {
+            "title": "Stop complaining to your kids about your ex",
+            "description": null
+          },
+          "task_8": {
+            "title": "Do not compare your children to their father when they show similar behavior",
+            "description": null
+          }
+        },
+        "total_tasks": 8
+      },
+      "month_4": {
+        "title": "month 4",
+        "total_subcats": 1,
+        "total_val": 0,
+        "subcat_1": {
+          "title": "How to Handle the Child Who is Acting Out",
+          "total_tasks": 7,
+          "task_1": {
+            "title": "Establish and maintain routines",
+            "description": null
+          },
+          "task_2": {
+            "title": "Allow your child to move between both parent’s homes without guilt",
+            "description": null
+          },
+          "task_3": {
+            "title": "Respect each other’s rules and values",
+            "description": null
+          },
+          "task_4": {
+            "title": "Acknowledge your child’s feelings",
+            "description": null
+          },
+          "task_5": {
+            "title": "Offer limited choices",
+            "description": null
+          },
+          "task_6": {
+            "title": "Make time for cuddling and fun",
+            "description": null
+          },
+          "task_7": {
+            "title": "Resolving conflict with your spouse",
+            "description": "* Express your needs and wants clearly\n* State your feelings in straight-forward “I” language\n* Practice and rehearse"
+          }
+        },
+        "total_tasks": 7
+      },
+      "month_5": {
+        "title": "month 5",
+        "total_subcats": 1,
+        "subcat_1": {
+          "title": "Parenting Plan—Making a Parenting Plan That Works for You and Your Kids",
+          "total_tasks": 3,
+          "task_1": {
+            "title": "The 2-2-3 Schedule",
+            "description": "Very young children typically do better with fewer days away from mom. Consider a 2-2-3 schedule for children under the age of five if both parents work."
+          },
+          "task_2": {
+            "title": "The 2-2-5-5 Schedule",
+            "description": "A 2-2-5-5 schedule divides the children’s time equally between the parents, but there is less switching back and forth than the 2-2-3 schedule."
+          },
+          "task_3": {
+            "title": "The Alternating Weeks Schedule",
+            "description": "Your child spends one week with one parent and the next week with the other parent. This schedule works well when your children are older."
+          }
+        },
+        "total_tasks": 3
+      },
+      "month_6": {
+        "title": "month 6",
+        "total_subcats": 1,
+        "total_val": 0,
+        "subcat_1": {
+          "title": "Parenting Plan—How to Negotiate an Effective Parenting Plan",
+          "total_tasks": 6,
+          "task_1": {
+            "title": "Come prepared",
+            "description": null
+          },
+          "task_2": {
+            "title": "Be Calm",
+            "description": null
+          },
+          "task_3": {
+            "title": "Take Turns Speaking and Listening",
+            "description": null
+          },
+          "task_4": {
+            "title": "Be Open to Different Options",
+            "description": null
+          },
+          "task_5": {
+            "title": "Have a Plan or Sticking to Your Plan",
+            "description": null
+          },
+          "task_6": {
+            "title": "Consider Using a Therapist to Negotiate",
+            "description": null
+          }
+        },
+        "total_tasks": 6
+      },
+      "month_7": {
+        "title": "month 7",
+        "total_subcats": 1,
+        "total_tasks": 2,
+        "subcat_1": {
+          "title": "Dating During Divorce",
+          "total_tasks": 2,
+          "task_1": {
+            "title": "How to Handle the New Girlfriend",
+            "description": "* Be Secure in Your Relationship with Your Child\n* Turn It into an Opportunity by Spending More Time with the Kids\n* Make the Kids Your priority"
+          },
+          "task_2": {
+          "title": "When to Date",
+          "description": "Talk to your divorce lawyer to find out how it will affect your case"
+          }
+        }
+      },
+      "month_8": {
+        "title": "month 8",
+        "total_subcats": 1,
+        "total_tasks": 3,
+        "subcat_1": {
+          "title": "Effective CoParenting",
+          "total_tasks": 3,
+          "task_1": {
+            "title": "Parenting as a team",
+            "description": "* Rules--Establish consistent guidelines in both homes\n* Discipline--follow similar systems of consequences for broken rules\n* Schedule--aim for some consistency in your children’s schedules"
+          },
+          "task_2": {
+            "title": "Handling disagreements",
+            "description": "* Respect Can Go a Long Way\n* Keep Talking\n* Don’t Sweat the Small Stuff\n* Compromise"
+          },
+          "task_3": {
+            "title": "Making transitions easier",
+            "description": "* When Your Child Leaves\n    * *Help children anticipate change.* Remind kids they’ll be leaving for the other parent’s house at least a day before the switch.\n    * *Double up.* To make packing simpler and make kids feel more comfortable when they are at the other parent's house, have kids keep certain basics—toothbrush, hairbrush, pajamas—at both houses.\n    * *Pack in advance.*  Encourage packing familiar reminders like a special stuffed toy or photograph.\n* When Your Child Returns\n    * *Time to adjust.* Try to arrange returns so that you have time for a meal and down time before school starts.\n    * *Keep things low-key.* When children first enter your home, try to have some down time together—read a book or do some other quiet activity.\n    * *Allow the child space.* Children often need a little time to adjust to the transition. If they seem to need some space, do something else nearby, like prepare dinner.\n    * *Establish a routine.* Play a game or prepare dinner every time your child returns. Kids thrive on routine—if they know exactly what to expect when they return to you it can help the transition."
+          }
+        }
+      }
+    },
+    "Home": {
+      "month_1": {
+        "title": "month 1",
+        "total_subcats": 1,
+        "total_tasks": 3,
+        "subcat_1": {
+          "title": "Familiarize Yourself With the Fair Market Value of Your Home",
+          "total_tasks": 3,
+          "task_1": {
+            "title": "Go to Zillow.com to quickly determine the fair market value of your home",
+            "description": null
+          },
+          "task_2": {
+            "title": "Calculate the equity in your home",
+            "description": null
+          },
+          "task_3": {
+            "title": "Gather information about the Mortgage Payment and HELOC/Second Mortgage",
+            "description": null
+          }
+        }
+      },
+      "month_2": {
+        "title": "month 2",
+        "total_subcats": 1,
+        "total_val": 0,
+        "total_tasks": 3,
+        "subcat_1": {
+          "title": "What to Do About the Family Home",
+          "total_tasks": 3,
+          "task_1": {
+            "title": "Check Alternative Housing Options in Your Area",
+            "description": null
+          },
+          "task_2": {
+            "title": "Consult MLS to find out what properties are on the market and what they are selling for",
+            "description": null
+          },
+          "task_3": {
+            "title": "You can use this information, along with the information about your home’s value, to work with your attorney in crafting a strategy for you to keep your home or to use it as a bargaining chip in negotiations with your husband",
+            "description": null
+          }
+        }
+      },
+      "month_3": {
+        "title": "month 3",
+        "total_subcats": 1,
+        "total_tasks": 3,
+        "subcat_1": {
+          "title": "Consider What to do About the Family Home",
+          "total_tasks": 3,
+          "task_1": {
+            "title": "Can you really afford the house on your own when the divorce is over?",
+            "description": null
+          },
+          "task_2": {
+            "title": "Could you be better off taking other assets in exchange for your share of the family home?",
+            "description": null
+          },
+          "task_3": {
+            "title": "Consider the many benefits of making a clean break by selling the marital home.",
+            "description": null
+          }
+        }
+      },
+      "month_4": {
+        "title": "month 4",
+        "total_subcats": 1,
+        "total_tasks": 6,
+        "subcat_1": {
+          "title": "Deciding What to Do About the Family Home",
+          "total_tasks": 6,
+          "task_1": {
+            "title": "Consult a local realtor to find out what comparable homes are currently selling for near your home and what you can expect to net from a sale",
+            "description": null
+          },
+          "task_2": {
+            "title": "Gather and review what is owed on the house and how much support you will need to make the payments",
+            "description": null
+          },
+          "task_3": {
+            "title": "Consider whether refinancing will lower your monthly payments",
+            "description": null
+          },
+          "task_4": {
+            "title": "If you have school-age children, consider a deferred sale of the house when the children turn 18",
+            "description": null
+          },
+          "task_5": {
+            "title": "What are your housing options where you live?",
+            "description": null
+          },
+          "task_6": {
+            "title": "Are there rentals available where you live that meet your needs and are in the same school district?",
+            "description": null
+          }
+        }
+      },
+      "month_5": {
+        "title": "month 5",
+        "total_subcats": 1,
+        "total_tasks": 7,
+        "subcat_1": {
+          "title": "Handling Your Emotions When Selling Your Home",
+          "total_tasks": 7,
+          "task_1": {
+            "title": "Pick an Agent Who Empathizes",
+            "description": null
+          },
+          "task_2": {
+            "title": "Don't Demand That People Pay for Your Memories",
+            "description": null
+          },
+          "task_3": {
+            "title": "Don't Hang onto the House by Renting Unless It Makes Economic Sense",
+            "description": null
+          },
+          "task_4": {
+            "title": "Try to Neutralize the Home of Memories",
+            "description": null
+          },
+          "task_5": {
+            "title": "Remember That It's People, Not Places, that are the Key to Memories",
+            "description": null
+          },
+          "task_6": {
+            "title": "Put Yourself in the Buyers' Loafers",
+            "description": null
+          },
+          "task_7": {
+            "title": "Find a New Place You Can Get Excited About",
+            "description": null
+          }
+        }
+      },
+      "month_6": {
+        "title": "month 6",
+        "total_subcats": 1,
+        "total_tasks": 4,
+        "subcat_1": {
+          "title": "Get Appraised—Obtain Appraisals of Real Estate for Use During Negotiations",
+          "total_tasks": 4,
+          "task_1": {
+            "title": "Negotiate who will pay for the appraisal and repairs",
+            "description": null
+          },
+          "task_2": {
+            "title": "Boost Your Home’s appraisal value",
+            "description": "* Patch the walls and paint.*\n* Fix leaky faucets, broken windows and cracked ceilings.\n* Clean up landscaping.\n* Itemize your improvements.\n* Jot down the repairs and updates you’ve made over the years, when you did them and how much they cost.\n* Bring carpet, tile, windows and other permanent fixtures up to date."
+          },
+          "task_3": {
+            "title": "Ask your attorney for a referral for an appraiser",
+            "description": "Schedule the appraisal."
+          },
+          "task_4": {
+            "title": "Be at the house during the appraisal",
+            "description": "* If there have been positive changes to your neighborhood—like new schools or new roads—let the appraiser know.\n* Provide the appraiser with itemizations for improvements, particularly things he may not notice like a new roof or insulation."
+          }
+        }
+      },
+      "month_7": {
+        "title": "month 7",
+        "total_subcats": 1,
+        "total_tasks": 12,
+        "subcat_1": {
+          "title": "Downsizing—When Less is More",
+          "total_tasks": 12,
+          "task_1": {
+            "title": "Assess Your Actual Needs",
+            "description": "* Take a walk through your house or apartment and evaluate everything you come across (furniture, books, food, etc.). Ask yourself if you've used it in the past year and, if not, get rid of it.\n* Make room for the things you'll actually use.\n* For stuff that you really have a hard time getting rid of, put the items in the garage. If you don't need or use them within 6 months, give, sell or throw them away."
+          },
+          "task_2": {
+            "title": "Go Through Your Home, Every Cabinet, Shelf and Closet Should be Cleared",
+            "description": "Only put back the things you couldn't live well without."
+          },
+          "task_3": {
+            "title": "Measure Your Furniture and get room measurements of your new space.",
+            "description": null
+          },
+          "task_4": {
+            "title": "Assess Your New Storage Areas",
+            "description": "Assessing exactly how much of the new space is dedicated to storage will give you an idea of the volume of items you need to dispose of before moving in."
+          },
+          "task_5": {
+            "title": "Ransack Your Old Storage Areas",
+            "description": "* Get rid of boxes of items that you haven’t used for years.\n* Go through your bathroom cabinets, kitchen and “junk” drawers.\n* Load up and drop off unwanted items at the nearest thrift shop.\n* Join a Freecycle group to give stuff away (www.freecycle.org).\n* If you live in an apartment building or townhouse complex, check notice boards and drop off areas for giving unwanted items to neighbors.\n* Call up your friends and relatives and see what they need."
+          },
+          "task_6": {
+            "title": "Sell Your Stuff",
+            "description": "* Have a yard sale (or a series of yard sales), or if you have a lot to sell quickly, consider a service to take care of it for you (e.g., Google liquidation estate content sales).\n* Utilize Craigslist and eBay to sell off the best stuff.\n* Used designer clothing can be resold in consignment shops."
+          },
+          "task_7": {
+            "title": "Get Organized",
+            "description": "Label everything by room."
+          },
+          "task_8": {
+            "title": "Move Large Items First",
+            "description": "Place furniture in the rooms as you go, according to the plan you made earlier."
+          },
+          "task_9": {
+            "title": "Put Away Storage Items",
+            "description": "Contained items that are meant for storage can be placed directly in their allotted spaces where they will be out of the way."
+          },
+          "task_10": {
+            "title": "Organize Boxed Items",
+            "description": "* Your labeled boxes can now be put into their respective rooms and the unpacking can begin.\n* Begin with the bathroom, as that is the room most likely to be needed immediately."
+          },
+          "task_11": {
+            "title": "Organize Your Space as You Unpack",
+            "description": "Utilize closet and cupboard storage solutions as you unpack. This way, more can be stored in these tight spaces and you will be setting a precedent for how your new, smaller space will be used."
+          },
+          "task_12": {
+            "title": "Relax...",
+            "description": "... and enjoy!"
+          }
+        }
+      },
+      "month_8": {
+        "title": "month 8",
+        "total_subcats": 1,
+        "total_tasks": 7,
+        "subcat_1": {
+          "title": "At Home in Your Home",
+          "total_tasks": 7,
+          "task_1": {
+            "title": "Replace your bedding",
+            "description": null
+          },
+          "task_2": {
+            "title": "Paint the bedroom a different color",
+            "description": null
+          },
+          "task_3": {
+            "title": "Get yourself new sleepwear and lingerie",
+            "description": null
+          },
+          "task_4": {
+            "title": "Buy a new ring for a different finger",
+            "description": null
+          },
+          "task_5": {
+            "title": "Replace artwork that you purchased with your spouse and that reminds you of him",
+            "description": null
+          },
+          "task_6": {
+            "title": "Freshen up your bathroom with new towels",
+            "description": null
+          },
+          "task_7": {
+            "title": "Pack up photos of the two of you and store them in the garage or attic",
+            "description": null
+          }
+        }
+      }
+    },
+    "Wellbeing": {
+      "month_1": {
+        "title": "month 1",
+        "total_subcats": 1,
+        "total_tasks": 4,
+        "subcat_1": {
+          "title": "Create a Mindfulness Practice",
+          "total_tasks": 4,
+          "task_1": {
+            "title": "Create a place in your home for an altar. Set aside time each day for meditation.",
+            "description": null
+          },
+          "task_2": {
+            "title": "After quieting your mind, ask for help from whatever source you believe in (God, the universe, a Higher Power) to assist you with whatever might arise during the day.",
+            "description": null
+          },
+          "task_3": {
+            "title": "Start a journal.",
+            "description": null
+          },
+          "task_4": {
+            "title": "Read for at least 10 minutes from the books on the following list and commit to practice the truths revealed.  As you engage this practice, record its impact in your journal. Your life will change and it will be better",
+            "description": "* *Radical Acceptance* (Tara Brach)\n* *Illuminata* (Marianne Williamson)\n* *The Seven Spiritual Laws of Success* (Deepak Chopra)"
+          }
+        }
+      },
+      "month_2": {
+        "title": "month 2",
+        "total_subcats": 1,
+        "total_tasks": 2,
+        "subcat_1": {
+          "title": "Seek Help",
+          "total_tasks": 2,
+          "task_1": {
+            "title": "Interview three therapists for yourself.  Ask your girlfriends for referrals, especially those who have gone through divorce",
+            "description": null
+          },
+          "task_2": {
+            "title": "Review any signs of stress identified on the following list to determine if your children need therapy, and if so, ask for a recommendation from your therapist",
+            "description": null
+          }
+        }
+      },
+      "month_3": {
+        "title": "month 3",
+        "total_subcats": 1,
+        "subcat_1": {
+          "title": "Essentials v. Nonessentials—Identify Priorities and Eliminate Nonessentials",
+          "total_tasks": 6,
+          "task_1": {
+            "title": "Get an early start each day",
+            "description": null
+          },
+          "task_2": {
+            "title": "Make a list of the things that must get done each day",
+            "description": null
+          },
+          "task_3": {
+            "title": "Pare the to-do list down to four to six tasks",
+            "description": null
+          },
+          "task_4": {
+            "title": "Start with the hardest task",
+            "description": null
+          },
+          "task_5": {
+            "title": "Eliminate remaining nonessentials",
+            "description": null
+          },
+          "task_6": {
+            "title": "Ask yourself throughout the day whether whatever you are doing at the moment is contributing to your freedom, independence and happiness. If no, eliminate it",
+            "description": null
+          }
+        },
+        "total_tasks": 6
+      },
+      "month_4": {
+        "title": "month 4",
+        "total_subcats": 1,
+        "subcat_1": {
+          "title": "Moving Through the Grieving Process During Divorce",
+          "total_tasks": 5,
+          "task_1": {
+            "title": "Keep up your therapy appointments",
+            "description": null
+          },
+          "task_2": {
+            "title": "Cry it out so you can eliminate those toxic emotions",
+            "description": null
+          },
+          "task_3": {
+            "title": "Double down on your mindfulness practice",
+            "description": null
+          },
+          "task_4": {
+            "title": "Write honestly in your journal about any addictive behaviors that are taking hold",
+            "description": null
+          },
+          "task_5": {
+            "title": "If you are stuck in depression or self-medicating, consult your therapist about seeking an evaluation to determine whether short-term treatment of antidepressants may be helpful",
+            "description": null
+          }
+        },
+        "total_tasks": 5
+      },
+      "month_5": {
+        "title": "month 5",
+        "total_subcats": 1,
+        "total_tasks": 3,
+        "subcat_1": {
+          "title": "Gratitude—Cultivate the Healing Power of Gratitude",
+          "total_tasks": 3,
+          "task_1": {
+            "title": "Keep a Gratitude Journal",
+            "description": "* Who or what inspired me today?\n* What brought me happiness today?\n* What brought me comfort and deep peace today?"
+          },
+          "task_2": {
+            "title": "Write a Thank You Letter",
+            "description": "* Make a list of at least five people who have had a profound impact on your life.\n* Choose one and write a thank you letter expressing gratitude for all the gifts you’ve received from that person.\n* If possible, deliver your gratitude letter in person."
+          },
+          "task_3": {
+            "title": "Take a Gratitude Walk",
+            "description": "* Set aside 20 minutes (or longer if you can) and walk in your neighborhood, through a park, around your office, or somewhere in nature. As you walk, consider the many things for which you are grateful:\n    * nurturing relationships\n    * material comforts\n    * the body that allows you to experience the world\n    * the mind that allows you to really understand yourself, and your essential spiritual nature"
+          }
+        }
+      },
+      "month_6": {
+        "title": "month 6",
+        "total_subcats": 1,
+        "total_val": 0,
+        "total_tasks": 4,
+        "subcat_1": {
+          "title": "Radical Acceptance—Accepting What Is Within Your Power to Change Will Set You Free",
+          "total_tasks": 4,
+          "task_1": {
+            "title": "Create a new mindset",
+            "description": "While engaging in your mediation practice, repeat this mantra: **I may not be happy about this result, but I accept it.**"
+          },
+          "task_2": {
+            "title": "Change your perspective",
+            "description": "Practice this mantra throughout the day when things don’t go as planned: **Perhaps there is another way to look at this.**"
+          },
+          "task_3": {
+            "title": "Choose peace of mind",
+            "description": "Practice this mantra when the chatter in your head becomes deafening: **I’d rather be at peace than be right.**"
+          },
+          "task_4": {
+            "title": "Allow yourself to process pain",
+            "description": "Repeat this mantra: **I am safe.**"
+          }
+        }
+      },
+      "month_7": {
+        "title": "month 7",
+        "total_subcats": 1,
+        "total_tasks": 5,
+        "subcat_1": {
+          "title": "Grit—Essential for Success",
+          "total_tasks": 5,
+          "task_1": {
+            "title": "Find Your Purpose",
+            "description": null
+          },
+          "task_2": {
+            "title": "Make a Plan",
+            "description": null
+          },
+          "task_3": {
+            "title": "Go for It",
+            "description": null
+          },
+          "task_4": {
+            "title": "Stick with It",
+            "description": null
+          },
+          "task_5": {
+            "title": "Just Do It",
+            "description": null
+          }
+        }
+      },
+      "month_8": {
+        "title": "month 8",
+        "total_subcats": 1,
+        "total_tasks": 1,
+        "subcat_1": {
+          "title": "Be Better, Not Bitter",
+          "total_tasks": 1,
+          "task_1": {
+            "title": null,
+            "description": "* Write a letter to your ex-husband expressing your feelings. When you are done, put the letter in an envelope, seal it and place it on your altar.  Each morning, for seven days, sit in quiet meditation before the altar with the intention of letting go of those negative emotions.\n* On the seventh day, burn the letter.\n* Sit in quiet meditation and visualize the negative emotions dissipating like the ashes of the letter. Ask that the new space created within yourself be filled with love and light."
+          }
+        }
+      }
+    }
+  }
+}

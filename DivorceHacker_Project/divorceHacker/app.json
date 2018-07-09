@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "DivorceHacker",
+    "sdkVersion": "25.0.0",
+  		"icon": "./photos/DHBolt-1024.png",
+  		"description": "DivorceHacker outlines each step in the legal process and coordinates all the other things you must consider in six key areas as mentioned in the book: The Divorce Hacker's Guide to Untying the Knot.",
+  		"version": "1.0",
+  		"orientation": "portrait",
+  		"ios": {
+  			"bundleIdentifier": "com.thedivorcehacker.DivorceHacker"
+  		}
+    }
+}

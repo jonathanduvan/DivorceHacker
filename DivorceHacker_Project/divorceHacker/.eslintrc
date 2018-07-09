@@ -1,0 +1,26 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true
+    },
+    "plugins": [
+        "react"
+    ],
+
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "eslint-config-airbnb",
+    ],
+
+    "rules": {
+
+      "jsx-a11y/href-no-hash": "off",
+      "camelcase": "off",
+      "no-underscore-dangle": "off",
+      "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
+      "react/prop-types": [1, { ignore: [children] }],
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "no-use-before-define": [1],
+    }
+}
