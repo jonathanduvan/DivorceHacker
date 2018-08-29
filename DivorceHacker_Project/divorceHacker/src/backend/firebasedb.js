@@ -15,12 +15,12 @@ export const ActionTypes = {
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: 'AIzaSyASpN5xKDzPLxSiRViKWbaf9mYb-OP9Cs0',
-  authDomain: 'divorcehacker.firebaseapp.com',
-  databaseURL: 'https://divorcehacker.firebaseio.com',
-  projectId: 'divorcehacker',
-  storageBucket: 'divorcehacker.appspot.com',
-  messagingSenderId: '23323103582',
+  apiKey: process.env.FIRBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  databseURL: process.env.FIREBASE_DATABASE_URL,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_ID = 23323103582,
 };
 firebase.initializeApp(firebaseConfig);
 
