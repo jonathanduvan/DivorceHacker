@@ -9,23 +9,23 @@
           "title": "Get Money Wise",
           "total_tasks": 5,
           "task_1": {
-            "title": "Open a bank account in your name.",
+            "title": "Open a Bank Account in Your Name",
             "description": null
           },
           "task_2": {
-            "title": "Set aside money for living expenses and to hire an attorney.",
+            "title": "Set Aside money for Living Expenses and to Hire an Attorney",
             "description": null
           },
           "task_3": {
-            "title": "Set aside money for living expenses and to hire an attorney.",
+            "title": "Secure Your Assets",
             "description": null
           },
           "task_4": {
-            "title": "Check your credit score.",
+            "title": "Check Your Credit Score",
             "description": null
           },
           "task_5": {
-            "title": "Open two credit cards in your name.",
+            "title": "Open Two Credit Cards in Your Name",
             "description": null
           }
         },
@@ -57,7 +57,7 @@
             "description": "List of corporate stocks and/or stock certificates owned by you and your spouse, individually or jointly, the name and address of stock broker(s)."
           },
           "task_7": {
-            "title": "Cars, boats, trailers",
+            "title": "Cars, Boats, Trailers",
             "description": "Copies of pink and registration slips, encumbrance (what’s owed), monthly payment."
           },
           "task_8": {
@@ -106,23 +106,23 @@
           "title": "Build Your Credit",
           "total_tasks": 5,
           "task_1": {
-            "title": "Make 100% of your payments on time.",
+            "title": "Make 100% of Your Payments on Time",
             "description": null
           },
           "task_2": {
-            "title": "Don’t let your debt balance exceed 30% of your credit limit.",
+            "title": "Don’t let Your Debt Balance Exceed 30% of Your Credit Limit",
             "description": null
           },
           "task_3": {
-            "title": "Avoid opening too many new accounts at once.",
+            "title": "Avoid Opening too Many new Accounts at Once",
             "description": null
           },
           "task_4": {
-            "title": "Keep accounts open for as long as possible.",
+            "title": "Keep Accounts Open for as Long as Possible",
             "description": null
           },
           "task_5": {
-            "title": "Check each of your credit reports annually for errors and discrepancies.",
+            "title": "Check Each of Your Credit Reports Annually for Errors and Discrepancies",
             "description": null
           }
         },
@@ -136,71 +136,71 @@
           "title": "Items to Gather to Establish Marital Standard of Living",
           "total_tasks": 23,
           "task_1": {
-            "title": "Mortgage statement",
+            "title": "Mortgage Statement",
             "description": null
           },
           "task_2": {
-            "title": "Property Tax statement",
+            "title": "Property Tax Statement",
             "description": null
           },
           "task_3": {
-            "title": "Homeowner’s Insurance statement",
+            "title": "Homeowner’s Insurance Statement",
             "description": null
           },
           "task_4": {
-            "title": "Homeowner’s Association Dues statement",
+            "title": "Homeowner’s Association Dues Statement",
             "description": null
           },
           "task_5": {
-            "title": "Home maintenance checks, credit card statements, and receipts",
+            "title": "Home Maintenance Checks, Credit Card Statements, and Receipts",
             "description": "Determine from total year prior to date of separation."
           },
           "task_6": {
-            "title": "Home Repairs checks and credit card statements and receipts (total year prior to date of separation)",
-            "description": null
+            "title": "Home Repairs Checks, Credit Card Statements, and Receipts",
+            "description": "Determine from total year prior to date of separation."
           },
           "task_7": {
-            "title": "Utilities statements (total year prior to date of separation)",
-            "description": null
+            "title": "Utilities Statements",
+            "description": "Determine from total year prior to date of separation."
           },
           "task_8": {
-            "title": "Phone, Cable, Internet statements (total year prior to date of separation)",
-            "description": null
+            "title": "Phone, Cable, Internet Statements",
+            "description": "Determine from total year prior to date of separation."
           },
           "task_9": {
-            "title": "Automobile Expenses (total car payment, gas, service records for year prior to date of separation)",
-            "description": null
+            "title": "Automobile Expenses",
+            "description": "Total car payment, gas, and service records for year prior to date of separation."
           },
           "task_10": {
-            "title": "Health Insurance statement",
+            "title": "Health Insurance Statement",
             "description": null
           },
           "task_11": {
-            "title": "Unreimbursed Medical Expenses records total year prior to date of separation",
+            "title": "Unreimbursed Medical Expenses Records",
             "description": "Determine from total year prior to date of separation"
           },
           "task_12": {
-            "title": "Food at Home expenses",
+            "title": "Food at Home Expenses",
             "description": "Determine from total year prior to date of separation."
           },
           "task_13": {
-            "title": "Food Eating Out expenses",
+            "title": "Food Eating Out Expenses",
             "description": "Determine from total year prior to date of separation."
           },
           "task_14": {
-            "title": "Dry cleaning receipts",
-            "description": "total year prior to date of separation"
+            "title": "Dry cleaning Receipts",
+            "description": "Determine from total year prior to date of separation."
           },
           "task_15": {
-            "title": "Clothing expenses",
+            "title": "Clothing Expenses",
             "description": "Determine from total year prior to date of separation."
           },
           "task_16": {
-            "title": "Personal expenses",
+            "title": "Personal Expenses",
             "description": "Determine from total year prior to date of separation."
           },
           "task_17": {
-            "title": "Fitness expenses",
+            "title": "Fitness Expenses",
             "description": "Determine from total account withdrawals for membership."
           },
           "task_18": {
@@ -217,7 +217,7 @@
           },
           "task_21": {
             "title": "Charitable Contributions",
-            "description": "Includes average from last 3 years’ income tax returns."
+            "description": "Average from last 3 years’ income tax returns."
           },
           "task_22": {
             "title": "Savings, Investment, Retirement",
@@ -237,7 +237,7 @@
           "total_tasks": 5,
           "title": "How to Handle the Suddenly Income Deficient Spouse (SIDS)",
           "task_1": {
-            "title": "Gather personal and business tax returns for the last three years and if possible, documentation of the business’s financials",
+            "title": "Gather personal and business tax returns for the last three years and if possible, documentation of the business’ financials",
             "description": null
           },
           "task_2": {
@@ -292,7 +292,7 @@
             "description": null
           },
           "task_3": {
-            "title": "When assessing the tax ramification of a proposed settlement",
+            "title": "When assessing the tax ramifications of a proposed settlement",
             "description": null
           }
         }
@@ -410,7 +410,7 @@
           "total_tasks": 1,
           "task_1": {
             "title": "Questions to Ask the Lawyer",
-            "description": "* How many years have you practiced family law?;How many divorces have you handled?\n* What is the average length of time between filing for divorce and resolution? How long does your average case take?\n* What percentage of your cases go to trial?\n* How many cases have you tried?\n* How much do you charge per hour?\n* What is your retainer?\n* How do you bill?\n* Can I pay by credit card?\n* When do you recommend using formal discovery?\n* Will I need a forensic accountant and if so, who do you recommend?"
+            "description": "* How many years have you practiced family law?\n* How many divorces have you handled?\n* What is the average length of time between filing for divorce and resolution? How long does your average case take?\n* What percentage of your cases go to trial?\n* How many cases have you tried?\n* How much do you charge per hour?\n* What is your retainer?\n* How do you bill?\n* Can I pay by credit card?\n* When do you recommend using formal discovery?\n* Will I need a forensic accountant and if so, who do you recommend?"
           }
         },
         "total_tasks": 1
@@ -422,15 +422,15 @@
           "title": "Consider How to Serve the Divorce Papers",
           "total_tasks": 3,
           "task_1": {
-            "title": "Notice of Acknowledgment and Receipt",
-            "description": "The least aggravating way to serve divorce papers is by Notice of Acknowledgement and Receipt. A form is sent by mail with the Summons and Petition and your spouse signs and returns it. But this only works if he is willing to cooperate."
+            "title": "Notice and Acknowledgment of Receipt",
+            "description": "The least aggravating way to serve divorce papers is by Notice and Acknowledgement of Receipt. A form is sent by mail with the Summons and Petition and your spouse signs and returns it. But this only works if he is willing to cooperate."
           },
           "task_2": {
             "title": "Process Server",
             "description": "If you are concerned that your husband may drain the bank accounts or dissipate marital assets, you need to have him served immediately by a process server."
           },
           "task_3": {
-            "title": "Pick up",
+            "title": "Pick Up",
             "description": "If you are mediating your divorce, then typically the mediator will prepare the petition and summons, have you come in to sign the papers and then have your husband come in to pick them up, thus effectuating service."
           }
         },
@@ -486,11 +486,11 @@
           "title": "Negotiate from a Position of Strength",
           "total_tasks": 3,
           "task_1": {
-            "title": "Conduct discovery",
+            "title": "Conduct Discovery",
             "description": "\n* Requests for Production\n* Interrogatories\n* Depositions\n* Subpoenas of business records"
           },
           "task_2": {
-            "title": "Evaluate different settlement scenarios",
+            "title": "Evaluate Different Settlement Scenarios",
             "description": null
           },
           "task_3": {
@@ -714,7 +714,7 @@
           },
           "task_5": {
             "title": "Allow a temporary disability to improve",
-            "description": "If you suffer from a disability, it will minimize your support obligation."
+            "description": "Eliminate your husband’s claim he cannot work because he is disabled."
           },
           "task_6": {
             "title": "Reduce income available for support",
@@ -795,8 +795,8 @@
         "title": "month 2",
         "total_subcats": 2,
         "subcat_1": {
-          "title": "How to Tell Your Children About the Divorce and Process it",
-          "total_tasks": 13,
+          "title": "How to Tell Your Children About the Divorce",
+          "total_tasks": 4,
           "task_1": {
             "title": "Tell children about the divorce together, if possible",
             "description": null
@@ -812,93 +812,49 @@
           "task_4": {
             "title": "Tell children they are loved and will be taken care of",
             "description": null
-          },
-          "task_5": {
+          }
+        },
+        "subcat_2": {
+          "title": "Things To Do and To Avoid",
+          "total_tasks": 9,
+          "task_1": {
             "title": "Include the other parent in school and other activities",
             "description": null
           },
-          "task_6": {
+          "task_2": {
             "title": "Be consistent and on time to pick up and return children",
             "description": null
           },
-          "task_7": {
+          "task_3": {
             "title": "Develop a workable parenting plan that gives children access to both parents",
             "description": null
           },
-          "task_8": {
+          "task_4": {
             "title": "Guard against canceling plans with children",
             "description": null
           },
-          "task_9": {
+          "task_5": {
             "title": "Give children permission to have a loving, satisfying relationship with the other parent",
             "description": null
           },
-          "task_10": {
+          "task_6": {
             "title": "Avoid putting children in the middle and in the position of having to take sides",
             "description": null
           },
-          "task_11": {
+          "task_7": {
             "title": "Avoid pumping children for information about the other parent",
             "description": null
           },
-          "task_12": {
+          "task_8": {
             "title": "Avoid arguing and discussing child support issues in front of children",
             "description": null
           },
-          "task_13": {
+          "task_9": {
             "title": "Avoid speaking negatively about the other parent or using the child as a pawn to hurt the other parent",
             "description": null
           }
         },
-        "subcat_2": {
-          "title": "Know the Potential Signs of Stress in Your Children",
-          "total_tasks": 11,
-          "task_1": {
-            "title": "Acting younger than their chronological age",
-            "description": null
-          },
-          "task_2": {
-            "title": "Showing fear of being apart from parent(s)",
-            "description": null
-          },
-          "task_3": {
-            "title": "Experiencing moodiness",
-            "description": null
-          },
-          "task_4": {
-            "title": "Acting out",
-            "description": null
-          },
-          "task_5": {
-            "title": "Being manipulative",
-            "description": null
-          },
-          "task_6": {
-            "title": "Experiencing sadness and depression",
-            "description": null
-          },
-          "task_7": {
-            "title": "Struggling with guilt",
-            "description": null
-          },
-          "task_8": {
-            "title": "Having sleep or eating problems",
-            "description": null
-          },
-          "task_9": {
-            "title": "Undergoing change in personality",
-            "description": null
-          },
-          "task_10": {
-            "title": "Having academic and peer problems",
-            "description": null
-          },
-          "task_11": {
-            "title": "Displaying irrational fears and compulsive behavior",
-            "description": null
-          }
-        },
-        "total_tasks": 24
+        "total_tasks": 13
       },
       "month_3": {
         "title": "month 3",
@@ -1008,7 +964,7 @@
           "title": "Parenting Plan—How to Negotiate an Effective Parenting Plan",
           "total_tasks": 6,
           "task_1": {
-            "title": "Come prepared",
+            "title": "Come Prepared",
             "description": null
           },
           "task_2": {
@@ -1024,7 +980,7 @@
             "description": null
           },
           "task_5": {
-            "title": "Have a Plan or Sticking to Your Plan",
+            "title": "Have a Plan for Sticking to Your Plan",
             "description": null
           },
           "task_6": {
@@ -1043,7 +999,7 @@
           "total_tasks": 2,
           "task_1": {
             "title": "How to Handle the New Girlfriend",
-            "description": "* Be Secure in Your Relationship with Your Child\n* Turn It into an Opportunity by Spending More Time with the Kids\n* Make the Kids Your priority"
+            "description": "* Be secure in your relationship with your child\n* Turn it into an opportunity by spending more time with the kids\n* Make the kids your priority"
           },
           "task_2": {
           "title": "When to Date",
@@ -1064,11 +1020,11 @@
           },
           "task_2": {
             "title": "Handling disagreements",
-            "description": "* Respect Can Go a Long Way\n* Keep Talking\n* Don’t Sweat the Small Stuff\n* Compromise"
+            "description": "* Respect can go a long way\n* Keep talking\n* Don’t sweat the small stuff\n* Compromise"
           },
           "task_3": {
             "title": "Making transitions easier",
-            "description": "* When Your Child Leaves\n    * *Help children anticipate change.* Remind kids they’ll be leaving for the other parent’s house at least a day before the switch.\n    * *Double up.* To make packing simpler and make kids feel more comfortable when they are at the other parent's house, have kids keep certain basics—toothbrush, hairbrush, pajamas—at both houses.\n    * *Pack in advance.*  Encourage packing familiar reminders like a special stuffed toy or photograph.\n* When Your Child Returns\n    * *Time to adjust.* Try to arrange returns so that you have time for a meal and down time before school starts.\n    * *Keep things low-key.* When children first enter your home, try to have some down time together—read a book or do some other quiet activity.\n    * *Allow the child space.* Children often need a little time to adjust to the transition. If they seem to need some space, do something else nearby, like prepare dinner.\n    * *Establish a routine.* Play a game or prepare dinner every time your child returns. Kids thrive on routine—if they know exactly what to expect when they return to you it can help the transition."
+            "description": "* When your child leaves\n    * *Help children anticipate change.* Remind kids they’ll be leaving for the other parent’s house at least a day before the switch.\n    * *Double up.* To make packing simpler and make kids feel more comfortable when they are at the other parent's house, have kids keep certain basics—toothbrush, hairbrush, pajamas—at both houses.\n    * *Pack in advance.*  Encourage packing familiar reminders like a special stuffed toy or photograph.\n* When Your Child Returns\n    * *Time to adjust.* Try to arrange returns so that you have time for a meal and down time before school starts.\n    * *Keep things low-key.* When children first enter your home, try to have some down time together—read a book or do some other quiet activity.\n    * *Allow the child space.* Children often need a little time to adjust to the transition. If they seem to need some space, do something else nearby, like prepare dinner.\n    * *Establish a routine.* Play a game or prepare dinner every time your child returns. Kids thrive on routine—if they know exactly what to expect when they return to you it can help the transition."
           }
         }
       }
@@ -1101,17 +1057,13 @@
         "total_val": 0,
         "total_tasks": 3,
         "subcat_1": {
-          "title": "What to Do About the Family Home",
-          "total_tasks": 3,
+          "title": "Check Alternative Housing Options",
+          "total_tasks": 2,
           "task_1": {
-            "title": "Check Alternative Housing Options in Your Area",
-            "description": null
-          },
-          "task_2": {
             "title": "Consult MLS to find out what properties are on the market and what they are selling for",
             "description": null
           },
-          "task_3": {
+          "task_2": {
             "title": "You can use this information, along with the information about your home’s value, to work with your attorney in crafting a strategy for you to keep your home or to use it as a bargaining chip in negotiations with your husband",
             "description": null
           }
@@ -1221,7 +1173,7 @@
           },
           "task_2": {
             "title": "Boost Your Home’s appraisal value",
-            "description": "* Patch the walls and paint.*\n* Fix leaky faucets, broken windows and cracked ceilings.\n* Clean up landscaping.\n* Itemize your improvements.\n* Jot down the repairs and updates you’ve made over the years, when you did them and how much they cost.\n* Bring carpet, tile, windows and other permanent fixtures up to date."
+            "description": "* Patch the walls and paint.\n* Fix leaky faucets, broken windows and cracked ceilings.\n* Clean up landscaping.\n* Itemize your improvements.\n* Jot down the repairs and updates you’ve made over the years, when you did them and how much they cost.\n* Bring carpet, tile, windows and other permanent fixtures up to date."
           },
           "task_3": {
             "title": "Ask your attorney for a referral for an appraiser",
@@ -1356,18 +1308,26 @@
       },
       "month_2": {
         "title": "month 2",
-        "total_subcats": 1,
-        "total_tasks": 2,
+        "total_subcats": 2,
+        "total_tasks": 3,
         "subcat_1": {
           "title": "Seek Help",
           "total_tasks": 2,
           "task_1": {
-            "title": "Interview three therapists for yourself.  Ask your girlfriends for referrals, especially those who have gone through divorce",
+            "title": "Interview three therapists for yourself. Ask your girlfriends for referrals, especially those who have gone through divorce",
             "description": null
           },
           "task_2": {
             "title": "Review any signs of stress identified on the following list to determine if your children need therapy, and if so, ask for a recommendation from your therapist",
             "description": null
+          }
+        },
+        "subcat_2": {
+          "total_tasks": 1,
+          "title": "Seek Help #2",
+          "task_1": {
+            "title": "Review signs of stress on following list",
+            "description": "* Acting younger than their chronological age.\n* Showing fear of being apart from parent(s).\n* Experiencing moodiness.\n* Acting out.\n* Being manipulative.\n* Experiencing sadness and depression.\n* Struggling with guilt.\n* Having sleep or eating problems.\n* Undergoing change in personality.\n* Having academic and peer problems.\n* Displaying irrational fears and compulsive behavior."
           }
         }
       },

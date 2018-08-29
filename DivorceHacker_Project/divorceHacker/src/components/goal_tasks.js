@@ -21,14 +21,14 @@ import { updatePropsProgress } from '../backend/firebasedb';
 class Goal_Tasks extends Component {
   static navigationOptions =({ navigation }) => ({
     title: `${navigation.state.params.title}`,
-    headerStyle: { backgroundColor: '#181715' },
     headerTintColor: `${navigation.state.params.headerTintColor}`,
+    gesturesEnabled: true,
     headerLeft:
   <Icon
     name="chevron-left"
-    size={20}
-    color="#d1d1d1"
-    style={{ left: 5 }}
+    size={25}
+    color={navigation.state.params.headerTintColor}
+    style={{ left: 17 }}
     onPress={() => navigation.state.params.leaveGoalsPage()}
   />,
     headerRight: null,
@@ -115,7 +115,7 @@ class Goal_Tasks extends Component {
   updateLocalProgress() {
     /* eslint-disable*/
     if (this.state.update) {
-      this.props.navigation.state.params.updatePropsProgress(this.state.progress)
+      this.props.navigation.state.params.updateProgress(this.state.progress)
     }
     /* eslint-enable*/
   }
@@ -174,13 +174,14 @@ class Goal_Tasks extends Component {
 
   _renderHeader(section, index, isActive) {
     const category = this.props.currentCategory.category;
+
     return (
       <Animatable.View
         duration={300}
         transition="backgroundColor"
         style={{
-          borderColor: (isActive ? this.props.currentCategory.color : '#181715'),
-          backgroundColor: '#222222',
+          borderColor: (isActive ? this.props.currentCategory.color : '#f3f9f9'),
+          backgroundColor: '#cccccc',
           padding: 15,
           flex: 1,
           borderWidth: 2,
@@ -203,11 +204,11 @@ class Goal_Tasks extends Component {
           {isActive ? (<Icon
             name="chevron-up"
             size={20}
-            color="#d1d1d1"
+            color="#181715"
           />) : (<Icon
             name="chevron-down"
             size={20}
-            color="#d1d1d1"
+            color="#181715"
           />)}
         </View>
       </Animatable.View>
@@ -286,7 +287,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     justifyContent: 'flex-start',
-    backgroundColor: '#181715',
+    backgroundColor: '#f3f9f9',
   },
   container2: {
     flex: 1,
@@ -310,6 +311,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 20,
     justifyContent: 'center',
+
   },
   monthContainer: {
     marginLeft: 10,
@@ -317,7 +319,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
     justifyContent: 'center',
-    backgroundColor: '#222222',
+    backgroundColor: '#B9B9B9',
     height: 150,
   },
   monthsList: {
@@ -333,51 +335,32 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 28,
     marginBottom: 40,
-    color: 'white',
+    color: '#181715',
     fontWeight: '200',
   },
   goalText: {
-    fontSize: 18,
+    fontSize: 20,
     marginBottom: 10,
-    color: '#F6F8FA',
+    color: '#181715',
     fontWeight: 'bold',
     width: Dimensions.get('window').width * 0.8,
   },
   text: {
-    color: '#F6F8FA',
-  },
-  listUnorderedItemIcon: {
-    color: '#F6F8FA',
-    marginLeft: 10,
-    marginRight: 5,
-    fontSize: 40,
-    fontWeight: 'bold',
-    lineHeight: 40,
-  },
-  listOrderedItemIcon: {
-    color: '#F6F8FA',
-    marginLeft: 10,
-    marginRight: 10,
-    fontWeight: 'bold',
-    lineHeight: 36,
+    color: '#181715',
+    fontSize: 18,
   },
   monthBox: {
     justifyContent: 'center',
     alignSelf: 'center',
     backgroundColor: '#222222',
-    borderColor: 'white',
     borderWidth: 5,
     height: 200,
     width: 80,
   },
-  monthText: {
-    fontSize: 24,
-    color: '#F6F8FA',
-    fontWeight: '200',
-  },
+
   buttonText: {
     fontSize: 16,
-    color: '#F6F8FA',
+    color: '#181715',
     marginRight: 5,
     fontWeight: '100',
   },

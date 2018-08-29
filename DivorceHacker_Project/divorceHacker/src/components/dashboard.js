@@ -49,17 +49,17 @@ function getTimestep(daysPassed) {
 
 class Dashboard extends Component {
   static navigationOptions = ({ navigation }) => ({
-    headerStyle: { backgroundColor: '#181715' },
     title: 'Dashboard',
     headerRight:
   <Icon
     name="cog"
-    size={30}
-    color="#d1d1d1"
-    style={{ right: 5 }}
+    size={35}
+    color="#577D7E"
+    style={{ right: 17 }}
     onPress={() => navigation.navigate('Settings')}
   />,
     headerLeft: null,
+    gesturesEnabled: false,
   });
   constructor(props) {
     super(props);
@@ -83,16 +83,19 @@ class Dashboard extends Component {
     this.buildGraphData = this.buildGraphData.bind(this);
     this.buildGraphTimeline = this.buildGraphTimeline.bind(this);
     this.renderGraph = this.renderGraph.bind(this);
+    this.renderTimeBar = this.renderTimeBar.bind(this);
+    this.renderTimeBarEnd = this.renderTimeBarEnd.bind(this);
+
     this.categoryUpdateCheck = this.categoryUpdateCheck.bind(this);
   }
-
-  componentDidMount() {
-    this.animate();
-    if ((Object.keys(this.props.progress).length !== 0) && (Object.keys(this.props.userInfo).length !== 0)) {
-      this.buildGraphData(this.props.progress);
-      this.buildGraphTimeline(this.props.userInfo);
-    }
-  }
+  //
+  // componentDidMount() {
+  //   this.animate();
+  //   if ((Object.keys(this.props.progress).length !== 0) && (Object.keys(this.props.userInfo).length !== 0)) {
+  //     this.buildGraphData(this.props.progress);
+  //     this.buildGraphTimeline(this.props.userInfo);
+  //   }
+  // }
 
   componentWillMount() {
     if ((Object.keys(this.props.progress).length !== 0) && (Object.keys(this.props.userInfo).length !== 0)) {
@@ -201,9 +204,8 @@ class Dashboard extends Component {
   */
 
   buildGraphTimeline(userInfo) {
-    const startTime = userInfo.startDate;
-    const currTime = new Date('9/6/2018').getTime();
-    console.log(startTime);
+    const startTime = userInfo.startTime;
+    const currTime = new Date().getTime();
     const _MS_PER_DAY = 1000 * 3600 * 24;
 
     const timeDifference = Math.abs(currTime - startTime);
@@ -215,8 +217,6 @@ class Dashboard extends Component {
     this.setState({
       timestep,
     });
-
-    console.log(daysPassed);
   }
 
   /*
@@ -242,76 +242,75 @@ class Dashboard extends Component {
       if (progress.hasChildren === true) {
         return (
           <View style={{ flex: 1 }}>
-            <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Legal', '#E45F56')} underlayColor="#373737">
+            <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Legal', '#A20021')} underlayColor="#a5a5a5">
               <View style={styles.container2}>
-                <Image source={require('../../photos/legal.png')} style={styles.legalLogo} />
+                <Image source={require('../../photos/Legal.png')} style={styles.logo} />
                 <Text style={styles.legalText}>Legal</Text>
                 <Icon
                   name="chevron-right"
                   size={20}
-                  color="#E45F56"
+                  color="#A20021"
                   style={{ right: 5 }}
                 />
               </View>
             </TouchableHighlight>
-            <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Financial', '#26A96C')} underlayColor="#373737">
+            <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Financial', '#369362')} underlayColor="#a5a5a5">
               <View style={styles.container2}>
-                <Image source={require('../../photos/financial.png')} style={styles.financialLogo} />
+                <Image source={require('../../photos/Financial.png')} style={styles.logo} />
                 <Text style={styles.financialText}>Financial</Text>
                 <Icon
                   name="chevron-right"
                   size={20}
-                  color="#26A96C"
+                  color="#369362"
                   style={{ right: 5 }}
                 />
               </View>
             </TouchableHighlight>
-            <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Wellbeing', '#00AAC2')} underlayColor="#373737">
+            <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Children', '#906C77')} underlayColor="#a5a5a5">
               <View style={styles.container2}>
-                <Image source={require('../../photos/wellbeing.png')} style={styles.wellbeingLogo} />
-                <Text style={styles.wellbeingText}>Wellbeing</Text>
-                <Icon
-                  name="chevron-right"
-                  size={20}
-                  color="#00AAC2"
-                  style={{ right: 5 }}
-                />
-              </View>
-            </TouchableHighlight>
-            <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Work', '#9e2556')} underlayColor="#373737">
-              <View style={styles.container2}>
-                <Image source={require('../../photos/work.png')} style={styles.workLogo} />
-                <Text style={styles.workText}>Work</Text>
-                <Icon
-                  name="chevron-right"
-                  size={20}
-                  color="#9e2556"
-                  style={{ right: 5 }}
-                />
-              </View>
-            </TouchableHighlight>
-
-            <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Home', '#fcd059')} underlayColor="#373737">
-              <View style={styles.container2}>
-                <Image source={require('../../photos/home.png')} style={styles.homeLogo} />
-                <Text style={styles.homeText}>Home</Text>
-                <Icon
-                  name="chevron-right"
-                  size={20}
-                  color="#fcd059"
-                  style={{ right: 5 }}
-                />
-              </View>
-            </TouchableHighlight>
-
-            <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Children', '#536FFF')} underlayColor="#373737">
-              <View style={styles.container2}>
-                <Image source={require('../../photos/children.png')} style={styles.childrenLogo} />
+                <Image source={require('../../photos/Children.png')} style={styles.logo} />
                 <Text style={styles.childrenText}>Children</Text>
                 <Icon
                   name="chevron-right"
                   size={20}
+                  color="#906C77"
+                  style={{ right: 5 }}
+                />
+              </View>
+            </TouchableHighlight>
+            <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Work', '#CE7100')} underlayColor="#a5a5a5">
+              <View style={styles.container2}>
+                <Image source={require('../../photos/Work.png')} style={styles.logo} />
+                <Text style={styles.workText}>Work</Text>
+                <Icon
+                  name="chevron-right"
+                  size={20}
+                  color="#CE7100"
+                  style={{ right: 5 }}
+                />
+              </View>
+            </TouchableHighlight>
+
+            <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Home', '#536FFF')} underlayColor="#a5a5a5">
+              <View style={styles.container2}>
+                <Image source={require('../../photos/Home.png')} style={styles.logo} />
+                <Text style={styles.homeText}>Home</Text>
+                <Icon
+                  name="chevron-right"
+                  size={20}
                   color="#536FFF"
+                  style={{ right: 5 }}
+                />
+              </View>
+            </TouchableHighlight>
+            <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Wellbeing', '#41337A')} underlayColor="#373737">
+              <View style={styles.container2}>
+                <Image source={require('../../photos/Wellbeing.png')} style={styles.logo} />
+                <Text style={styles.wellbeingText}>Wellbeing</Text>
+                <Icon
+                  name="chevron-right"
+                  size={20}
+                  color="#41337A"
                   style={{ right: 5 }}
                 />
               </View>
@@ -322,9 +321,9 @@ class Dashboard extends Component {
     }
     return (
       <View style={{ flex: 1 }}>
-        <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Legal', '#E45F56')} underlayColor="#373737">
+        <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Legal', '#E45F56')} underlayColor="#a5a5a5">
           <View style={styles.container2}>
-            <Image source={require('../../photos/legal.png')} style={styles.legalLogo} />
+            <Image source={require('../../photos/Legal.png')} style={styles.logo} />
             <Text style={styles.legalText}>Legal</Text>
             <Icon
               name="chevron-right"
@@ -334,9 +333,9 @@ class Dashboard extends Component {
             />
           </View>
         </TouchableHighlight>
-        <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Financial', '#26A96C')} underlayColor="#373737">
+        <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Financial', '#26A96C')} underlayColor="#a5a5a5">
           <View style={styles.container2}>
-            <Image source={require('../../photos/financial.png')} style={styles.financialLogo} />
+            <Image source={require('../../photos/Financial.png')} style={styles.logo} />
             <Text style={styles.financialText}>Financial</Text>
             <Icon
               name="chevron-right"
@@ -346,39 +345,39 @@ class Dashboard extends Component {
             />
           </View>
         </TouchableHighlight>
-        <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Wellbeing', '#00AAC2')} underlayColor="#373737">
+        <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Work', '#CE7100')} underlayColor="#a5a5a5">
           <View style={styles.container2}>
-            <Image source={require('../../photos/wellbeing.png')} style={styles.wellbeingLogo} />
-            <Text style={styles.wellbeingText}>Wellbeing</Text>
-            <Icon
-              name="chevron-right"
-              size={20}
-              color="#00AAC2"
-              style={{ right: 5 }}
-            />
-          </View>
-        </TouchableHighlight>
-        <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Work', '#9e2556')} underlayColor="#373737">
-          <View style={styles.container2}>
-            <Image source={require('../../photos/work.png')} style={styles.workLogo} />
+            <Image source={require('../../photos/Work.png')} style={styles.logo} />
             <Text style={styles.workText}>Work</Text>
             <Icon
               name="chevron-right"
               size={20}
-              color="#9e2556"
+              color="#CE7100"
               style={{ right: 5 }}
             />
           </View>
         </TouchableHighlight>
 
-        <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Home', '#fcd059')} underlayColor="#373737">
+        <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Home', '#536FFF')} underlayColor="#a5a5a5">
           <View style={styles.container2}>
-            <Image source={require('../../photos/home.png')} style={styles.homeLogo} />
+            <Image source={require('../../photos/Home.png')} style={styles.logo} />
             <Text style={styles.homeText}>Home</Text>
             <Icon
               name="chevron-right"
               size={20}
-              color="#fcd059"
+              color="#536FFF"
+              style={{ right: 5 }}
+            />
+          </View>
+        </TouchableHighlight>
+        <TouchableHighlight style={styles.button} onPress={() => this._onCategoryPress('Wellbeing', '#41337A')} underlayColor="#a5a5a5">
+          <View style={styles.container2}>
+            <Image source={require('../../photos/Wellbeing.png')} style={styles.logo} />
+            <Text style={styles.wellbeingText}>Wellbeing</Text>
+            <Icon
+              name="chevron-right"
+              size={20}
+              color="#41337A"
               style={{ right: 5 }}
             />
           </View>
@@ -423,9 +422,10 @@ class Dashboard extends Component {
           </View>
           <View style={styles.item}>
             <View style={styles.data}>
-              { wellbeing_prog &&
-                <Animated.View style={[styles.bar, styles.wellbeingBar,
-                  { width: wellbeing_prog }]}
+              {
+                children_prog &&
+                <Animated.View style={[styles.bar, styles.childrenBar,
+                  { width: children_prog }]}
                 />
               }
             </View>
@@ -452,10 +452,9 @@ class Dashboard extends Component {
           </View>
           <View style={styles.item}>
             <View style={styles.data}>
-              {
-                children_prog &&
-                <Animated.View style={[styles.bar, styles.childrenBar,
-                  { width: children_prog }]}
+              { wellbeing_prog &&
+                <Animated.View style={[styles.bar, styles.wellbeingBar,
+                  { width: wellbeing_prog }]}
                 />
               }
             </View>
@@ -490,16 +489,6 @@ class Dashboard extends Component {
         <View style={styles.item}>
           <View style={styles.data}>
             {
-              wellbeing_prog &&
-                <Animated.View style={[styles.bar, styles.wellbeingBar,
-                  { width: wellbeing_prog }]}
-                />
-            }
-          </View>
-        </View>
-        <View style={styles.item}>
-          <View style={styles.data}>
-            {
               work_prog &&
                 <Animated.View style={[styles.bar, styles.workBar,
                   { width: work_prog }]}
@@ -517,10 +506,50 @@ class Dashboard extends Component {
             }
           </View>
         </View>
+        <View style={styles.item}>
+          <View style={styles.data}>
+            {
+              wellbeing_prog &&
+                <Animated.View style={[styles.bar, styles.wellbeingBar,
+                  { width: wellbeing_prog }]}
+                />
+            }
+          </View>
+        </View>
       </View>
     );
   }
 
+
+  renderTimeBar(progress) {
+    if (progress.hasChildren) {
+      return (
+        <View style={[styles.timecontainer, { left: this.state.timestep }]}>
+          <Image source={require('../../photos/timeline_light_blue.png')} style={styles.timeline} />
+        </View>
+      );
+    }
+    return (
+      <View style={[styles.timecontainerNoChildren, { left: this.state.timestep }]}>
+        <Image source={require('../../photos/timeline_light_blue.png')} style={styles.timeline} />
+      </View>
+    );
+  }
+
+  renderTimeBarEnd(progress) {
+    if (progress.hasChildren) {
+      return (
+        <View style={styles.timeEnd}>
+          <Image source={require('../../photos/timeline.png')} style={styles.timeline} />
+        </View>
+      );
+    }
+    return (
+      <View style={styles.timeEndNoChildren}>
+        <Image source={require('../../photos/timeline.png')} style={styles.timeline} />
+      </View>
+    );
+  }
   /*
   Calls renderCategories, renderGraph, and sets up time bar. If progress hasn't been fetched, then render circle loading animation
 
@@ -530,7 +559,6 @@ class Dashboard extends Component {
 
   */
   render() {
-    const timestep = this.state.timestep;
     if (this.props.progress !== null && this.props.userInfo) {
       return (
         <View style={styles.container}>
@@ -541,10 +569,8 @@ class Dashboard extends Component {
               <Text style={styles.time}>0 . . . 1M . . . 2M . . . 3M . . . 4M . . . 5M . . . 6M . . . 7M . . . 8M</Text>
             </TouchableHighlight>
           </View>
-          <View style={[styles.timecontainer, { left: this.state.timestep }]}>
-            <Image source={require('../../photos/timeline.png')} style={styles.timeline} />
-          </View>
-
+          {this.renderTimeBar(this.props.progress)}
+          {this.renderTimeBarEnd(this.props.progress)}
 
         </View>
       );
@@ -571,30 +597,58 @@ class Dashboard extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#181715',
+    backgroundColor: '#f3f9f9',
     flexDirection: 'column',
   },
   time: {
     fontSize: 12,
-    color: '#dddddd',
+    color: '#181715',
     fontWeight: '500',
     alignSelf: 'center',
   },
+  graphContainer: {
+    borderColor: '#181715',
+  },
   timeline: {
+    height: 245,
+    backgroundColor: 'transparent',
+    position: 'absolute',
+  },
+  timelineNoChildren: {
     height: 255,
     backgroundColor: 'transparent',
     position: 'absolute',
   },
   timecontainer: {
     flex: 1,
-    top: 315,
+    top: Dimensions.get('window').height - 356,
     position: 'absolute',
     zIndex: 2,
   },
+  timecontainerNoChildren: {
+    flex: 1,
+    top: Dimensions.get('window').height - 376,
+    position: 'absolute',
+    zIndex: 3,
+  },
+  timeEnd: {
+    flex: 1,
+    top: Dimensions.get('window').height - 356,
+    position: 'absolute',
+    zIndex: 2,
+    left: (Dimensions.get('window').width - (Dimensions.get('window').width / 8.2)),
+  },
+  timeEndNoChildren: {
+    flex: 1,
+    top: Dimensions.get('window').height - 376,
+    position: 'absolute',
+    zIndex: 2,
+    left: (Dimensions.get('window').width - (Dimensions.get('window').width / 8.2)),
+  },
   timebox: {
     alignSelf: 'center',
-    backgroundColor: '#181715',
-    borderTopColor: '#dddddd',
+    backgroundColor: 'transparent',
+    borderTopColor: '#181715',
     borderTopWidth: 0.5,
     width: 350,
     left: 10,
@@ -642,11 +696,11 @@ const styles = StyleSheet.create({
   },
   button: {
     alignSelf: 'center',
-    backgroundColor: '#222222',
-    borderBottomColor: '#181715',
-    borderTopColor: '#181715',
-    borderColor: '#222222',
-    borderWidth: 1,
+    backgroundColor: '#cccccc',
+    borderBottomColor: '#f3f9f9',
+    borderTopColor: '#f3f9f9',
+    borderColor: '#f3f9f9',
+    borderWidth: 0.5,
     width: (Dimensions.get('window').width - 10),
     height: 50,
   },
@@ -668,7 +722,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   dataNumber: {
-    color: '#dddddd',
+    color: '#577D7E',
     fontSize: 12,
     left: 10,
     fontWeight: '500',
@@ -676,103 +730,73 @@ const styles = StyleSheet.create({
     zIndex: 5,
     backgroundColor: 'transparent',
   },
-  legalLogo: {
-    width: 40,
-    height: 40,
-    marginLeft: 18,
-    resizeMode: 'contain',
-  },
   legalText: {
     fontSize: 24,
-    color: '#E45F56',
+    color: '#A20021',
     fontWeight: '300',
     right: 105,
   },
   legalBar: {
-    backgroundColor: '#E45F56',
-  },
-  financialLogo: {
-    width: 40,
-    height: 40,
-    marginLeft: 18,
-    resizeMode: 'contain',
+    backgroundColor: '#A20021',
   },
   financialText: {
     fontSize: 24,
-    color: '#26A96C',
+    color: '#369362',
     fontWeight: '300',
     right: 90,
 
   },
   financialBar: {
-    backgroundColor: '#26A96C',
-  },
-  wellbeingLogo: {
-    width: 40,
-    height: 40,
-    marginLeft: 18,
-    resizeMode: 'contain',
+    backgroundColor: '#3EAA70',
   },
   wellbeingText: {
     fontSize: 24,
-    color: '#00AAC2',
+    color: '#41337A',
     fontWeight: '300',
     right: 85,
   },
   wellbeingBar: {
-    backgroundColor: '#00AAC2',
+    backgroundColor: '#4C407A',
   },
-  workLogo: {
-    width: 40,
-    height: 40,
-    marginLeft: 19,
+  logo: {
+    width: 39,
+    height: 39,
+    marginLeft: 18,
     resizeMode: 'contain',
   },
   workText: {
     fontSize: 24,
-    color: '#9e2556',
+    color: '#CE7100',
     fontWeight: '300',
     right: 107,
 
   },
   workBar: {
-    backgroundColor: '#9e2556',
-  },
-  homeLogo: {
-    width: 40,
-    height: 40,
-    marginLeft: 19,
-    resizeMode: 'contain',
+    backgroundColor: '#CE7100',
   },
   homeText: {
     fontSize: 24,
-    color: '#fcd059',
+    color: '#536FFF',
     fontWeight: '300',
     right: 102,
 
   },
   homeBar: {
-    backgroundColor: '#fcd059',
-  },
-  childrenLogo: {
-    width: 40,
-    height: 40,
-    marginLeft: 20,
-    resizeMode: 'contain',
+    backgroundColor: '#536FFF',
   },
   childrenText: {
     fontSize: 24,
-    color: '#536FFF',
+    color: '#906C77',
     fontWeight: '300',
     right: 92,
 
   },
   childrenBar: {
-    backgroundColor: '#536FFF',
+    backgroundColor: '#9E7682',
   },
   text: {
     fontSize: 12,
-    color: '#dddddd',
+    color: '#577D7E',
     marginLeft: -80,
     marginTop: 10,
   },

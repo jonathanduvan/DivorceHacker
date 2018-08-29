@@ -2,6 +2,11 @@ import { ActionTypes } from '../backend/firebasedb';
 
 const ProgressReducer = (state = { all: {}, currentCategory: null, currentGoal: null, userInfo: {} }, action) => {
   switch (action.type) {
+    case ActionTypes.FETCH_USER:
+      return {
+        ...state,
+        all: action.payload.progress,
+        userInfo: action.payload.userInfo };
     case ActionTypes.FETCH_PROGRESS:
       return {
         ...state,

@@ -6,6 +6,7 @@ import {
   Image,
   View,
   StatusBar,
+  Dimensions,
   KeyboardAvoidingView,
 } from 'react-native';
 import t from 'tcomb-form-native';
@@ -15,13 +16,18 @@ import _ from 'lodash';
 // import storage from 'react-native-simple-store';
 
 
-import { signIn, getAllProgress, fetchUserInfo, updatePropsProgress, updatePropsUserInfo } from '../backend/firebasedb';
+import { signIn, fetchUser } from '../backend/firebasedb';
 
 
 // import serverInfo from './env.js';
 
 
 class DivorceHacker extends Component {
+  static navigationOptions = () => ({
+    headerRight: null,
+    headerLeft: null,
+    gesturesEnabled: false,
+  });
   constructor(props) {
     super(props);
     this.state = {
@@ -45,21 +51,18 @@ class DivorceHacker extends Component {
     if (value) {
       const user_email = value.login.email;
       const user_password = value.login.password;
-      const startDate = new Date();
-      const timestamp = startDate.getTime();
 
-      const token = null;
+      // const token = null;
       signIn(user_email, user_password)
-        .then(user => this._onLoginSuccess(user.uid, user_email))
+        .then(user => this._onLoginSuccess(user, user_email))
         .catch((error) => {
           alert(error.message);
         });
     }
   }
 
-  _onLoginSuccess(uid, email) {
-    this.props.fetchUserInfo(uid, email);
-    this.props.getAllProgress(uid);
+  _onLoginSuccess(user, email) {
+    this.props.fetchUser(user.uid, email);
     this.props.navigation.navigate('Dashboard');
   }
 
@@ -103,12 +106,12 @@ class DivorceHacker extends Component {
 
 
     // overriding the text color
-    stylesheet.textbox.normal.color = '#dddddd';
-    stylesheet.textbox.error.color = '#dddddd';
-    stylesheet.textbox.normal.borderRadius = 0;
-    stylesheet.textbox.normal.borderLeftColor = '#1B676B';
-    stylesheet.textbox.normal.borderRightColor = '#1B676B';
-    stylesheet.textbox.normal.borderTopColor = '#1B676B';
+    stylesheet.textbox.normal.color = '#181715';
+    stylesheet.textbox.error.color = '#181715';
+    stylesheet.textbox.normal.borderRadius = 0.5;
+    stylesheet.textbox.normal.borderColor = '#181715';
+    stylesheet.textbox.normal.borderRightColor = '#181715';
+    stylesheet.textbox.normal.borderTopColor = '#181715';
 
 
     const options = {
@@ -120,10 +123,10 @@ class DivorceHacker extends Component {
             password: {
               password: true,
               secureTextEntry: true,
-              placeholderTextColor: '#d1d1d1',
+              placeholderTextColor: '#181715',
               clearButtonMode: 'while-editing',
               keyboardAppearance: 'dark',
-              selectionColor: '#ff6600',
+              selectionColor: '#577D7E',
               returnKeyType: 'go',
               stylesheet,
               error: 'Please insert a valid password',
@@ -132,10 +135,10 @@ class DivorceHacker extends Component {
               keyboardType: 'email-address',
               autoCorrect: false,
               autoCapitalize: 'none',
-              placeholderTextColor: '#d1d1d1',
+              placeholderTextColor: '#181715',
               clearButtonMode: 'while-editing',
               keyboardAppearance: 'dark',
-              selectionColor: '#ff6600',
+              selectionColor: '#577D7E',
               returnKeyType: 'next',
               stylesheet,
               error: 'Please insert a valid email address',
@@ -147,12 +150,12 @@ class DivorceHacker extends Component {
 
     return (
 
-      <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
+      <KeyboardAvoidingView style={styles.keyboard_container} behavior="padding" enabled>
         <View style={styles.container}>
           <StatusBar
-            barStyle="light-content"
+            barStyle="dark-content"
           />
-          <Image source={require('../../photos/main_logo.png')} style={styles.logo} onLoadEnd={this.handleImageLoaded} />
+          <Image source={require('../../photos/DivorceHacker_Logo.png')} style={styles.logo} onLoadEnd={this.handleImageLoaded} />
 
           <View style={styles.word_container}>
             <Text style={styles.LoginButtonText} onPress={() => this._onLoginForward()}>Login</Text>
@@ -183,19 +186,29 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     flexDirection: 'column',
     flex: 1,
-    backgroundColor: '#181715',
+    backgroundColor: '#f3f9f9',
     padding: 10,
+    marginTop: 20,
 
+  },
+  keyboard_container: {
+    justifyContent: 'space-around',
+    flexDirection: 'column',
+    flex: 1,
+    backgroundColor: '#f3f9f9',
+    padding: 10,
   },
   word_container: {
     alignSelf: 'center',
     alignItems: 'center',
     flexDirection: 'row',
-    top: 50,
     flex: 1,
+    top: 70,
+    marginBottom: -30,
   },
   form_container: {
     flex: 1,
+    top: 30,
   },
   token_container: {
     flexDirection: 'row',
@@ -205,9 +218,10 @@ const styles = StyleSheet.create({
     marginTop: -3,
   },
   logo: {
-    top: 30,
+    bottom: 30,
+    marginBottom: -150,
     width: '100%',
-    height: '20%',
+    height: '40%',
     alignSelf: 'center',
     resizeMode: 'contain',
   },
@@ -221,15 +235,15 @@ const styles = StyleSheet.create({
   },
   LoginButtonText: {
     fontSize: 18,
-    color: '#ff6600',
+    color: '#356567',
   },
   orText: {
     fontSize: 18,
-    color: '#7D7D7D',
+    color: '#464543',
   },
   RegisterButtonText: {
     fontSize: 18,
-    color: '#ff6600',
+    color: '#356567',
   },
   left_nav: {
     left: 10,
@@ -238,4 +252,4 @@ const styles = StyleSheet.create({
 
 
 // react-redux glue
-export default connect(null, { getAllProgress, fetchUserInfo, updatePropsProgress, updatePropsUserInfo })(DivorceHacker);
+export default connect(null, { fetchUser })(DivorceHacker);

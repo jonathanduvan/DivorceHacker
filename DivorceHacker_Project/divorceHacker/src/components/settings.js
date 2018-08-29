@@ -11,11 +11,12 @@ import {
   Modal,
   FlatList,
 } from 'react-native';
+import { NavigationActions } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import t from 'tcomb-form-native';
 import _ from 'lodash';
 
-import { updatePropsUserInfo } from '../backend/firebasedb';
+import { updateEmail, updateName, updatePassword, reauthenticateUser, signOut, updatePropsUserInfo } from '../backend/firebasedb';
 
 
 // import PinAuth from './pin_auth';
@@ -48,7 +49,7 @@ const options = {
       placeholderTextColor: '#dddddd',
       clearButtonMode: 'while-editing',
       keyboardAppearance: 'dark',
-      selectionColor: '#ff6600',
+      selectionColor: '#577D7E',
       returnKeyType: 'next',
       stylesheet,
       error: 'Please input your first name',
@@ -59,8 +60,8 @@ const options = {
       placeholderTextColor: '#dddddd',
       clearButtonMode: 'while-editing',
       keyboardAppearance: 'dark',
-      selectionColor: '#ff6600',
-      returnKeyType: 'next',
+      selectionColor: '#577D7E',
+      returnKeyType: 'go',
       stylesheet,
       error: 'Please input your last name',
     },
@@ -70,14 +71,25 @@ const options = {
       placeholderTextColor: '#dddddd',
       clearButtonMode: 'while-editing',
       keyboardAppearance: 'dark',
-      selectionColor: '#ff6600',
+      selectionColor: '#577D7E',
       returnKeyType: 'next',
       autoCapitalize: 'none',
       stylesheet,
       error: 'Please input a valid email',
     },
+    currentPassword: {
+      password: true,
+      secureTextEntry: true,
+      placeholderTextColor: '#dddddd',
+      clearButtonMode: 'while-editing',
+      keyboardAppearance: 'dark',
+      selectionColor: '#577D7E',
+      returnKeyType: 'go',
+      stylesheet,
+      error: 'Please input your current password',
+    },
     passConfirm: {
-      error: 'Passwords must match',
+      error: 'Your new password did not match the confirm password',
       fields: {
         currentPassword: {
           password: true,
@@ -85,18 +97,18 @@ const options = {
           placeholderTextColor: '#dddddd',
           clearButtonMode: 'while-editing',
           keyboardAppearance: 'dark',
-          selectionColor: '#ff6600',
+          selectionColor: '#577D7E',
           returnKeyType: 'go',
           stylesheet,
           error: 'Please input a valid password',
         },
-        password: {
+        newPassword: {
           password: true,
           secureTextEntry: true,
           placeholderTextColor: '#dddddd',
           clearButtonMode: 'while-editing',
           keyboardAppearance: 'dark',
-          selectionColor: '#ff6600',
+          selectionColor: '#577D7E',
           returnKeyType: 'go',
           stylesheet,
           error: 'Please input a valid password',
@@ -107,7 +119,7 @@ const options = {
           placeholderTextColor: '#dddddd',
           clearButtonMode: 'while-editing',
           keyboardAppearance: 'dark',
-          selectionColor: '#ff6600',
+          selectionColor: '#577D7E',
           returnKeyType: 'go',
           stylesheet,
           error: 'Please input a valid password',
@@ -119,19 +131,18 @@ const options = {
 
 };
 function samePasswords(x) {
-  return (x.password === x.ConfirmPassword) && (x.password !== x.currentPassword);
+  return (x.newPassword === x.confirmPassword) && (x.newPassword !== x.currentPassword);
 }
 
 class Settings extends Component {
   static navigationOptions =({ navigation }) => ({
     title: 'Settings',
-    headerStyle: { backgroundColor: '#181715' },
     headerLeft:
   <Icon
     name="chevron-left"
-    size={20}
-    color="#dddddd"
-    style={{ left: 5 }}
+    size={25}
+    color="#577D7E"
+    style={{ left: 17 }}
     onPress={() => navigation.goBack()}
   />,
     headerRight: null,
@@ -160,7 +171,10 @@ class Settings extends Component {
 
     this.editEmail = this.editEmail.bind(this);
     this.editName = this.editName.bind(this);
+    this.editPassword = this.editPassword.bind(this);
     this.showModal = this.showModal.bind(this);
+
+    this.signOutUser = this.signOutUser.bind(this);
   }
   componentWillMount() {
     if (Object.keys(this.props.userInfo).length !== 0) {
@@ -169,6 +183,14 @@ class Settings extends Component {
           firstName: this.props.userInfo.firstName,
           lastName: this.props.userInfo.lastName,
           email: this.props.userInfo.email,
+          currentPassword: '',
+
+        },
+        tempValue: {
+          firstName: this.props.userInfo.firstName,
+          lastName: this.props.userInfo.lastName,
+          email: this.props.userInfo.email,
+          currentPassword: '',
         },
       });
     }
@@ -176,8 +198,14 @@ class Settings extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (Object.keys(nextProps.userInfo).length !== 0) {
+      console.log(nextProps);
       this.setState({
         value: {
+          firstName: nextProps.userInfo.firstName,
+          lastName: nextProps.userInfo.lastName,
+          email: nextProps.userInfo.email,
+        },
+        tempValue: {
           firstName: nextProps.userInfo.firstName,
           lastName: nextProps.userInfo.lastName,
           email: nextProps.userInfo.email,
@@ -193,15 +221,39 @@ class Settings extends Component {
   }
 
 
-  editPassword() {
-    /* Render*/
-  }
-
-
-  onEmailChange() {
+  onEmailChange(e) {
+    const { tempValue } = this.state;
+    tempValue.email = e.email;
+    tempValue.currentPassword = e.currentPassword;
     if (!this.state.emailChange) {
       this.setState({
         emailChange: true,
+        tempValue,
+      });
+    } else {
+      this.setState({
+        emailChange: true,
+        tempValue,
+      });
+    }
+  }
+
+  onNameChange(e) {
+    const { tempValue } = this.state;
+    tempValue.firstName = e.firstName;
+    tempValue.lastName = e.lastName;
+    // this.setState({
+    //   value,
+    // });
+
+    if (!this.state.nameChange) {
+      this.setState({
+        nameChange: true,
+        tempValue,
+      });
+    } else {
+      this.setState({
+        tempValue,
       });
     }
   }
@@ -212,25 +264,46 @@ class Settings extends Component {
     if (emailValues) {
       const { value } = this.state;
       value.email = emailValues.email;
+      value.userID = this.props.userInfo.userID;
+      value.user = this.props.userInfo.user;
+      value.startTime = this.props.userInfo.startTime;
 
+      const currentPassword = emailValues.currentPassword;
+      const currentEmail = this.props.userInfo.email;
+      reauthenticateUser(currentEmail, currentPassword)
+        .then(() => {
+          updateEmail(value)
+            .then(() => {
+              this.props.updatePropsUserInfo(value);
+            })
+            .catch((error) => {
+              console.log(error.message);
+              alert(error.message);
+              this.setState({
+                value: {
+                  firstName: this.props.userInfo.firstName,
+                  lastName: this.props.userInfo.lastName,
+                  email: this.props.userInfo.email,
+                  currentPassword: '',
 
-      this.props.updatePropsUserInfo(value);
-    }
-  }
+                },
+              });
+            });
+        })
+        .catch((error) => {
+          console.log(error.message);
 
-  onNameChange() {
-    // const value = this.state.value;
-    // value.firstName = e.firstName;
-    // value.lastName = e.lastName;
-    // this.setState({
-    //   value,
-    // });
+          alert(error.message);
+          this.setState({
+            value: {
+              firstName: this.props.userInfo.firstName,
+              lastName: this.props.userInfo.lastName,
+              email: this.props.userInfo.email,
+              currentPassword: '',
 
-
-    if (!this.state.nameChange) {
-      this.setState({
-        nameChange: true,
-      });
+            },
+          });
+        });
     }
   }
 
@@ -242,19 +315,66 @@ class Settings extends Component {
     if (nameValues) {
       value.firstName = nameValues.firstName;
       value.lastName = nameValues.lastName;
+      value.userID = this.props.userInfo.userID;
+      value.user = this.props.userInfo.user;
+      value.startTime = this.props.userInfo.startTime;
       // this.setState({
       //   value,
       // });
 
-      this.props.updatePropsUserInfo(value);
+      updateName(value)
+        .then(() => {
+          this.props.updatePropsUserInfo(value);
+        })
+        .catch((error) => {
+          this.setState({
+            value: {
+              firstName: this.props.userInfo.firstName,
+              lastName: this.props.userInfo.lastName,
+              email: this.props.userInfo.email,
+              currentPassword: '',
+            },
+            tempValue: {
+              firstName: this.props.userInfo.firstName,
+              lastName: this.props.userInfo.lastName,
+              email: this.props.userInfo.email,
+              currentPassword: '',
+            },
+          });
+          alert(error.message);
+        });
     }
   }
+
+
+  editPassword() {
+    /* Render*/
+    const passValues = this.passForm.getValue();
+    if (passValues) {
+      const { currentPassword, newPassword } = passValues.passConfirm;
+      reauthenticateUser(this.props.userInfo.email, currentPassword)
+        .then(() => {
+          updatePassword(newPassword)
+            .then(() => {
+              this.closeModal();
+            })
+            .catch((error) => {
+              alert(error.message);
+            });
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    }
+  }
+
 
   emailFormModal() {
     const Email = t.refinement(t.String, s => /@/.test(s));
 
     const emailInputs = t.struct({
       email: Email,
+      currentPassword: t.String,
     });
 
     return (
@@ -271,12 +391,12 @@ class Settings extends Component {
           <Form
             ref={(form) => { this.emailForm = form; }}
             type={emailInputs}
-            onChange={() => this.onEmailChange()}
-            value={this.state.value}
+            onChange={e => this.onEmailChange(e)}
+            value={this.state.tempValue}
             options={options}
           />
 
-          {this.state.emailChange ? (<TouchableHighlight style={styles.button} onPress={() => this.editEmail()} underlayColor="#FF781A">
+          {this.state.emailChange ? (<TouchableHighlight style={styles.button} onPress={() => this.editEmail()} underlayColor="#577D7E">
             <Text style={styles.buttonText}>Update Email</Text>
           </TouchableHighlight>) : (<Text style={styles.updateText}>Email Up to Date</Text>)}
 
@@ -289,7 +409,7 @@ class Settings extends Component {
     const Password = t.refinement(t.String, s => s.length >= 2);
     const passConfirm = t.subtype(t.struct({
       currentPassword: Password,
-      password: Password,
+      newPassword: Password,
       confirmPassword: Password,
     }), samePasswords);
 
@@ -304,20 +424,17 @@ class Settings extends Component {
         transparent
         visible={this.state.passwordModalVisible}
         style={styles.container}
-        onRequestClose={() => {
-          alert('Modal has been closed.');
-        }}
       >
         <View style={styles.containerModal}>
           <View style={styles.iconContainer}>
-            <Icon name="times-circle" color="#d1d1d1" size={28} style={styles.select_token} onPress={() => this.closeModal('Password')} />
+            <Icon name="times-circle" color="#d1d1d1" size={28} style={styles.select_token} onPress={() => this.closeModal()} />
           </View>
           <Form
             ref={(form) => { this.passForm = form; }}
             type={passInputs}
             options={options}
           />
-          <TouchableHighlight style={styles.button} underlayColor="#FF781A">
+          <TouchableHighlight style={styles.button} underlayColor="#577D7E" onPress={() => this.editPassword()}>
             <Text style={styles.buttonText}>Update Password</Text>
           </TouchableHighlight>
         </View>
@@ -341,19 +458,19 @@ class Settings extends Component {
       >
         <View style={styles.containerModal}>
           <View style={styles.iconContainer}>
-            <Icon name="times-circle" color="#d1d1d1" size={28} style={styles.select_token} onPress={() => this.closeModal('Name')} />
+            <Icon name="times-circle" color="#d1d1d1" size={28} style={styles.select_token} onPress={() => this.closeModal()} />
           </View>
           <KeyboardAvoidingView behavior="padding" enabled>
             <Form
               type={nameInputs}
               ref={(form) => { this.nameForm = form; }}
-              value={this.state.value}
-              onChange={() => this.onNameChange()}
+              value={this.state.tempValue}
+              onChange={e => this.onNameChange(e)}
               options={options}
             />
           </KeyboardAvoidingView>
 
-          {this.state.nameChange ? (<TouchableHighlight style={styles.button} onPress={() => this.editName()} underlayColor="#FF781A">
+          {this.state.nameChange ? (<TouchableHighlight style={styles.button} onPress={() => this.editName()} underlayColor="#577D7E">
             <Text style={styles.buttonText}>Update Name</Text>
           </TouchableHighlight>) : (<Text style={styles.updateText}>Name Up to Date</Text>)}
 
@@ -363,29 +480,16 @@ class Settings extends Component {
     );
   }
 
-  closeModal(modal) {
-    if (modal === 'Email') {
-      this.setState({
-        nameModalVisible: false,
-        emailModalVisible: false,
-        passwordModalVisible: false,
-        emailChanged: false,
-      });
-    } else if (modal === 'Name') {
-      this.setState({
-        nameModalVisible: false,
-        emailModalVisible: false,
-        passwordModalVisible: false,
-        nameChange: false,
-      });
-    } else {
-      this.setState({
-        nameModalVisible: false,
-        emailModalVisible: false,
-        passwordModalVisible: false,
-        passwordChange: false,
-      });
-    }
+  closeModal() {
+    const { value } = this.state;
+    this.setState({
+      nameModalVisible: false,
+      emailModalVisible: false,
+      passwordModalVisible: false,
+      passwordChange: false,
+      tempValue: value,
+
+    });
   }
   showModal(item) {
     if (item.key === 'Email') {
@@ -444,11 +548,11 @@ class Settings extends Component {
                   {item.modal ? (<Icon
                     name="chevron-up"
                     size={20}
-                    color="#d1d1d1"
+                    color="#181715"
                   />) : (<Icon
                     name="chevron-down"
                     size={20}
-                    color="#d1d1d1"
+                    color="#181715"
                   />)}
                 </View>
               </View>
@@ -462,6 +566,18 @@ class Settings extends Component {
     return renderMonthList;
   }
 
+  signOutUser() {
+    signOut()
+      .then(() => {
+        console.log(this.props.navigation);
+        this.props.navigation.dispatch(NavigationActions.reset({
+          index: 0, key: null, actions: [NavigationActions.navigate({ routeName: 'Home' })],
+        }));
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  }
   render() {
     if (this.props.userInfo) {
       const list = this.buildSettings();
@@ -477,7 +593,7 @@ class Settings extends Component {
             {emailModal}
             {passwordModal}
             {nameModal}
-            <TouchableHighlight style={styles.signoutButton} underlayColor="#373737">
+            <TouchableHighlight style={styles.signoutButton} underlayColor="#373737" onPress={() => this.signOutUser()}>
               <View style={styles.container2}>
                 <Text style={styles.signoutText}> Sign Out</Text>
               </View>
@@ -500,7 +616,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     flex: 1,
     padding: 10,
-    backgroundColor: '#181715',
+    backgroundColor: '#f3f9f9',
 
   },
   containerModal: {
@@ -508,7 +624,7 @@ const styles = StyleSheet.create({
     marginTop: 22,
     flex: 1,
     padding: 10,
-    backgroundColor: 'rgba(34,34,34, .93)',
+    backgroundColor: 'rgba(34,34,34, .88)',
 
   },
   iconContainer: {
@@ -544,19 +660,19 @@ const styles = StyleSheet.create({
   },
   updateText: {
     fontSize: 20,
-    color: '#ff6600',
+    color: '#C2E5E6',
     alignSelf: 'center',
   },
   headerText: {
     fontSize: 18,
-    color: '#dddddd',
+    color: '#181715',
     marginRight: 5,
     fontWeight: '600',
   },
   userInfoText: {
     alignSelf: 'flex-end',
     fontSize: 16,
-    color: '#dddddd',
+    color: '#181715',
     fontWeight: '300',
     right: 10,
   },
@@ -564,7 +680,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
     alignItems: 'center',
-    backgroundColor: '#ff6600',
+    backgroundColor: '#C2E5E6',
+    borderColor: '#577D7E',
+    borderWidth: 3.5,
     marginTop: 20,
     marginBottom: 30,
 
@@ -576,9 +694,9 @@ const styles = StyleSheet.create({
   },
   signoutButton: {
     alignSelf: 'center',
-    backgroundColor: '#222222',
+    backgroundColor: '#cccccc',
     alignItems: 'center',
-    borderColor: '#222222',
+    borderColor: '#f3f9f9',
     borderWidth: 1,
     width: (Dimensions.get('window').width - 10),
     height: 50,
@@ -586,7 +704,7 @@ const styles = StyleSheet.create({
   },
   signoutText: {
     fontSize: 24,
-    color: '#ff6600',
+    color: '#577D7E',
     fontWeight: '300',
   },
   scroll: {
@@ -596,8 +714,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    borderColor: '#181715',
-    backgroundColor: '#222222',
+    borderColor: '#f3f9f9',
+    backgroundColor: '#cccccc',
     paddingTop: 15,
     paddingBottom: 15,
     borderWidth: 2,

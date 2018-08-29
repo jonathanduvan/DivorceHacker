@@ -4,6 +4,7 @@ import {
   ScrollView,
   Text,
   View,
+  Dimensions,
   TouchableHighlight,
   KeyboardAvoidingView,
 } from 'react-native';
@@ -11,7 +12,9 @@ import {
 import t from 'tcomb-form-native';
 import _ from 'lodash';
 import { connect } from 'react-redux';
-import { signUp, addUser, updateUserCount, getAllProgress, fetchUserInfo } from '../backend/firebasedb';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
+import { signUp, addUser, fetchUser } from '../backend/firebasedb';
 
 const Form = t.form.Form;
 
@@ -40,15 +43,14 @@ const Person = t.struct({
 
 
 // overriding the text color
-stylesheet.textbox.normal.color = '#dddddd';
-stylesheet.textbox.normal.borderRadius = 0;
-stylesheet.textbox.error.color = '#dddddd';
-stylesheet.textbox.normal.borderLeftColor = '#1B676B';
-stylesheet.textbox.normal.borderRightColor = '#1B676B';
-stylesheet.textbox.normal.borderTopColor = '#1B676B';
+stylesheet.textbox.normal.color = '#181715';
+stylesheet.textbox.normal.borderRadius = 1;
+stylesheet.textbox.error.color = '#181715';
+stylesheet.textbox.normal.borderColor = '#181715';
 
-stylesheet.controlLabel.normal.color = '#dddddd';
-stylesheet.controlLabel.error.color = '#dddddd';
+
+stylesheet.controlLabel.normal.color = '#181715';
+stylesheet.controlLabel.error.color = '#181715';
 
 const options = {
   auto: 'placeholders',
@@ -56,10 +58,10 @@ const options = {
     FirstName: {
       autoCorrect: false,
       autoCapitalize: 'words',
-      placeholderTextColor: '#dddddd',
+      placeholderTextColor: '#464543',
       clearButtonMode: 'while-editing',
       keyboardAppearance: 'dark',
-      selectionColor: '#ff6600',
+      selectionColor: '#577D7E',
       returnKeyType: 'next',
       stylesheet,
       error: 'Please input your first name',
@@ -67,10 +69,10 @@ const options = {
     LastName: {
       autoCorrect: false,
       autoCapitalize: 'words',
-      placeholderTextColor: '#dddddd',
+      placeholderTextColor: '#464543',
       clearButtonMode: 'while-editing',
       keyboardAppearance: 'dark',
-      selectionColor: '#ff6600',
+      selectionColor: '#577D7E',
       returnKeyType: 'next',
       stylesheet,
       error: 'Please input your last name',
@@ -78,10 +80,10 @@ const options = {
     email: {
       keyboardType: 'email-address',
       autoCorrect: false,
-      placeholderTextColor: '#dddddd',
+      placeholderTextColor: '#464543',
       clearButtonMode: 'while-editing',
       keyboardAppearance: 'dark',
-      selectionColor: '#ff6600',
+      selectionColor: '#577D7E',
       returnKeyType: 'next',
       autoCapitalize: 'none',
       stylesheet,
@@ -90,7 +92,7 @@ const options = {
     doYouHaveChildren: {
       label: 'Do you have children?',
       stylesheet,
-      onTintColor: '#ff6600',
+      onTintColor: '#577D7E',
     },
     pass_confirm: {
       error: 'Passwords must match',
@@ -98,10 +100,10 @@ const options = {
         password: {
           password: true,
           secureTextEntry: true,
-          placeholderTextColor: '#dddddd',
+          placeholderTextColor: '#464543',
           clearButtonMode: 'while-editing',
           keyboardAppearance: 'dark',
-          selectionColor: '#ff6600',
+          selectionColor: '#577D7E',
           returnKeyType: 'go',
           stylesheet,
           error: 'Please input a valid password',
@@ -109,10 +111,10 @@ const options = {
         ConfirmPassword: {
           password: true,
           secureTextEntry: true,
-          placeholderTextColor: '#dddddd',
+          placeholderTextColor: '#464543',
           clearButtonMode: 'while-editing',
           keyboardAppearance: 'dark',
-          selectionColor: '#ff6600',
+          selectionColor: '#577D7E',
           returnKeyType: 'go',
           stylesheet,
           error: 'Please input a valid password',
@@ -126,6 +128,19 @@ const options = {
 
 
 class Register extends Component {
+  static navigationOptions = ({ navigation }) => ({
+    headerLeft:
+  <Icon
+    name="chevron-left"
+    size={25}
+    color="#577D7E"
+    style={{ left: 17, marginTop: 10 }}
+    onPress={() => navigation.goBack()}
+  />,
+    cardStack: {
+      gesturesEnabled: false,
+    },
+  });
   constructor(props) {
     super(props);
     this.state = {
@@ -156,8 +171,6 @@ class Register extends Component {
 
       let uID = null;
 
-      this.props.navigation.navigate('About');
-
       signUp(user_email, user_password).then((user) => {
         uID = user.uid;
         this._onRegisterSuccess(uID, user_first_name,
@@ -180,9 +193,7 @@ class Register extends Component {
   }
 
   Registered(userid, email) {
-    // updateUserCount();
-    // this.props.fetchUserInfo(userid, email);
-    // this.props.getAllProgress(userid);
+    this.props.fetchUser(userid, email);
     this.props.navigation.navigate('About');
     return true;
   }
@@ -203,7 +214,7 @@ class Register extends Component {
               value={this.state.value}
             />
           </View>
-          <TouchableHighlight style={styles.button} onPress={() => this.Registered(1, 1)} underlayColor="#FF781A">
+          <TouchableHighlight style={styles.button} onPress={() => this.onPress()} underlayColor="#577D7E">
             <Text style={styles.buttonText}>Create Account</Text>
           </TouchableHighlight>
         </ScrollView>
@@ -218,17 +229,19 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     padding: 20,
-    backgroundColor: '#181715',
+    backgroundColor: '#f3f9f9',
+    borderColor: '#f3f9f9',
   },
   header: {
     borderWidth: 0.5,
-    marginBottom: 20,
+    marginTop: -15,
+    borderColor: 'transparent',
   },
   headerText: {
     fontSize: 35,
     paddingBottom: 3,
     marginBottom: 10,
-    color: '#dddddd',
+    color: '#181715',
     fontWeight: '200',
   },
   scroll: {
@@ -257,7 +270,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
     alignItems: 'center',
-    backgroundColor: '#ff6600',
+    backgroundColor: '#C2E5E6',
+    borderColor: '#577D7E',
+    borderWidth: 3.5,
     marginTop: 30,
     borderRadius: 50,
     paddingTop: 15,
@@ -268,4 +283,4 @@ const styles = StyleSheet.create({
 });
 
 // react-redux glue
-export default connect(null, { getAllProgress, fetchUserInfo })(Register);
+export default connect(null, { fetchUser })(Register);

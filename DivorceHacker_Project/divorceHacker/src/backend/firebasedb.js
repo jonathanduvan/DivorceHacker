@@ -7,8 +7,10 @@ export const ActionTypes = {
   FETCH_USER_INFO: 'FETCH_USER_INFO',
   FETCH_CATEGORY: 'FETCH_CATEGORY',
   FETCH_TASKS: 'FETCH_TASKS',
+  FETCH_USER: 'FETCH_USER',
   UPDATE_PROGRESS: 'UPDATE_PROGRESS',
   UPDATE_USER_INFO: 'UPDATE_USER_INFO',
+  UPDATE_PASSWORD: 'UPDATE_PASSWORD',
 };
 
 // Initialize Firebase
@@ -31,6 +33,10 @@ export async function signIn(email, password) {
   return auth.signInWithEmailAndPassword(email, password);
 }
 
+export function signOut() {
+  return auth.signOut();
+}
+
 export function signUp(email, password) {
   return auth.createUserWithEmailAndPassword(email, password);
 }
@@ -45,7 +51,6 @@ export function addUser(userID, firstName, lastName, Email, hasChildren) {
   const user = {
     first_name: firstName,
     last_name: lastName,
-    email: Email,
     has_children: hasChildren,
     start_time: timestamp,
     Financial: {
@@ -459,6 +464,10 @@ export function addUser(userID, firstName, lastName, Email, hasChildren) {
           task_1: 0,
           task_2: 0,
         },
+        subcat_2: {
+          progress: 0,
+          task_1: 0,
+        },
       },
       month_3: {
         progress: 0,
@@ -543,15 +552,6 @@ export function addUser(userID, firstName, lastName, Email, hasChildren) {
             task_2: 0,
             task_3: 0,
             task_4: 0,
-            task_5: 0,
-            task_6: 0,
-            task_7: 0,
-            task_8: 0,
-            task_9: 0,
-            task_10: 0,
-            task_11: 0,
-            task_12: 0,
-            task_13: 0,
           },
           subcat_2: {
             progress: 0,
@@ -564,8 +564,6 @@ export function addUser(userID, firstName, lastName, Email, hasChildren) {
             task_7: 0,
             task_8: 0,
             task_9: 0,
-            task_10: 0,
-            task_11: 0,
           },
         },
         month_3: {
@@ -701,7 +699,7 @@ export function updateChildrenProgress(userID, newProgress) {
 Fetch All user progress. Function is called after user is verified
 signing in or after completion of sign up
 */
-export function getAllProgress(userID) {
+export function fetchUser(userID, email) {
   return (dispatch) => {
     const progressRef = database.ref(`Users/${userID}`).once('value');
     progressRef.then((snapProgress) => {
@@ -710,44 +708,63 @@ export function getAllProgress(userID) {
       const wellbeingProg = snapProgress.child('Wellbeing').val();
       const workProg = snapProgress.child('Work').val();
       const homeProg = snapProgress.child('Home').val();
+      const firstName = snapProgress.child('first_name').val();
+      const lastName = snapProgress.child('last_name').val();
+      const startTime = snapProgress.child('start_time').val();
 
+      const userInfo = {
+        userID,
+        firstName,
+        lastName,
+        email,
+        startTime,
+      };
       if (snapProgress.hasChild('Children')) {
         const childrenProg = snapProgress.child('Children').val();
         const hasChildren = true;
+        const progress = {
+          Legal: legalProg,
+          Financial: financialProg,
+          Wellbeing: wellbeingProg,
+          Work: workProg,
+          Home: homeProg,
+          Children: childrenProg,
+          hasChildren,
+        };
         dispatch({
-          type: 'FETCH_PROGRESS',
+          type: 'FETCH_USER',
           payload: {
-            Legal: legalProg,
-            Financial: financialProg,
-            Wellbeing: wellbeingProg,
-            Work: workProg,
-            Home: homeProg,
-            Children: childrenProg,
-            hasChildren,
+            progress,
+            userInfo,
           },
         });
       } else {
         const hasChildren = false;
+        const progress = {
+          Legal: legalProg,
+          Financial: financialProg,
+          Wellbeing: wellbeingProg,
+          Work: workProg,
+          Home: homeProg,
+          hasChildren,
+        };
         dispatch({
-          type: 'FETCH_PROGRESS',
+          type: 'FETCH_USER',
           payload: {
-            Legal: legalProg,
-            Financial: financialProg,
-            Wellbeing: wellbeingProg,
-            Work: workProg,
-            Home: homeProg,
-            hasChildren,
+            progress,
+            userInfo,
           },
         });
       }
       /* NEED TO FIGURE OUT ERROR HANDLING HERE*/
     })
       .catch((error) => {
-        console.log('had user data error');
         console.log(error.message);
+        alert(error.message);
       });
   };
 }
+
 
 export function fetchGoals(category) {
   return (dispatch) => {
@@ -813,6 +830,7 @@ export function updatePropsProgress(newProgress) {
 }
 
 export function updatePropsUserInfo(newInfo) {
+  console.log(newInfo);
   return (dispatch) => {
     dispatch({
       type: ActionTypes.UPDATE_USER_INFO,
@@ -831,7 +849,12 @@ export function updateBackendProgress(userID, newProgress) {
       Work: newProgress.Work,
       Home: newProgress.Home,
       Children: newProgress.Children,
-    });
+    }).then(() => {
+      updatePropsProgress(newProgress);
+    })
+      .catch(() => {
+        updatePropsProgress(newProgress);
+      });
   } else {
     database.ref(`Users/${userID}`).update({
       Financial: newProgress.Financial,
@@ -840,7 +863,7 @@ export function updateBackendProgress(userID, newProgress) {
       Work: newProgress.Work,
       Home: newProgress.Home,
       Children: newProgress.Children,
-    });
+    }, updatePropsProgress());
   }
   return (dispatch) => {
     dispatch({
@@ -850,4 +873,28 @@ export function updateBackendProgress(userID, newProgress) {
       },
     });
   };
+}
+
+export function reauthenticateUser(email, currentPassword) {
+  const user = auth.currentUser;
+  const cred = firebase.auth.EmailAuthProvider.credential(email, currentPassword);
+  return user.reauthenticateWithCredential(cred);
+}
+
+export function updateName(userInfo) {
+  return database.ref(`Users/${userInfo.userID}`).update({
+    first_name: userInfo.firstName,
+    last_name: userInfo.lastName,
+  });
+}
+
+export function updateEmail(userInfo) {
+  const user = auth.currentUser;
+
+  return user.updateEmail(userInfo.email);
+}
+
+export function updatePassword(newPassword) {
+  const user = auth.currentUser;
+  return user.updatePassword(newPassword);
 }

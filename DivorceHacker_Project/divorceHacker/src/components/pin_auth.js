@@ -15,7 +15,7 @@ import {
 import _ from 'lodash';
 import Dashboard from './dashboard.js';
 import t from 'tcomb-form-native';
-//import storage from 'react-native-simple-store';
+// import storage from 'react-native-simple-store';
 
 
 // clone the default stylesheet
@@ -31,14 +31,14 @@ stylesheet.textbox.normal.height = 70;
 stylesheet.textbox.normal.fontSize = 36;
 stylesheet.textbox.normal.marginTop = 100;
 
-var Form = t.form.Form;
+const Form = t.form.Form;
 
-var PinForm = t.struct({
+const PinForm = t.struct({
 
-  Pin: t.Number
+  Pin: t.Number,
 });
 
-var options = {
+const options = {
   auto: 'placeholders',
   fields: {
     Pin: {
@@ -51,10 +51,10 @@ var options = {
       selectionColor: '#88C425',
       returnKeyType: 'next',
       autoCapitalize: 'none',
-      stylesheet: stylesheet,
-      error: 'Please input the authentication pin'
-    }
-  }
+      stylesheet,
+      error: 'Please input the authentication pin',
+    },
+  },
 };
 
 class PinAuth extends Component {
@@ -66,46 +66,44 @@ class PinAuth extends Component {
 
     this._onPress = this._onPress.bind(this);
     this.authUser = this.authUser.bind(this);
-    }
+  }
 
-    authUser(token, user_id) {
-      this.props.navigator.push({
-        title: 'Dashboard',
-        component: Dashboard
-      });
-    }
+  authUser(token, user_id) {
+    this.props.navigator.push({
+      title: 'Dashboard',
+      component: Dashboard,
+    });
+  }
 
   _onPress() {
-    var value = this.refs.form.getValue();
+    const value = this.refs.form.getValue();
     if (!value) {
       return null;
     }
-    var pin = value.Pin;
-    var user_id = this.state.user_id;
-    var token = null;
+    const pin = value.Pin;
+    const user_id = this.state.user_id;
+    const token = null;
 
     this.authUser(token, user_id);
-
   }
 
   render() {
-
     return (
       <View style={styles.container}>
 
-      <Text style={styles.infoText}>Check your email for a {'\n'} pin and enter it here:</Text>
+        <Text style={styles.infoText}>Check your email for a {'\n'} pin and enter it here:</Text>
 
-      <Text style={styles.hint}>Hint: it may take a few minutes</Text>
+        <Text style={styles.hint}>Hint: it may take a few minutes</Text>
 
-      <Form
-        ref="form"
-        type={PinForm}
-        options={options}
-        style={styles.title}
-      />
-       <TouchableHighlight onPress={this._onPress} style={styles.Registerbutton}>
+        <Form
+          ref="form"
+          type={PinForm}
+          options={options}
+          style={styles.title}
+        />
+        <TouchableHighlight onPress={this._onPress} style={styles.Registerbutton}>
           <Text style={styles.buttonText}>SUBMIT</Text>
-       </TouchableHighlight>
+        </TouchableHighlight>
       </View>
     );
   }
@@ -133,7 +131,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 24,
     color: 'white',
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   Registerbutton: {
     justifyContent: 'center',
@@ -150,7 +148,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
     color: 'white',
     fontSize: 24,
-  }
+  },
 });
 
-export default PinAuth
+export default PinAuth;
